@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\imagens\01_superficie_marte.jpg" />
+  </ItemGroup>
+
 </Project>

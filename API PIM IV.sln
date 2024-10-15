@@ -5,7 +5,11 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API Teste 05-09", "API Teste 05-09\API Teste 05-09.csproj", "{BADD0863-E5A3-48F4-BB93-5F08BD6418D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebHtmlMVC", "WebHtmlMVC\WebHtmlMVC.csproj", "{A6F12572-EDB4-4315-839F-E2607B67ED4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebHtmlMVC", "WebHtmlMVC\WebHtmlMVC.csproj", "{A6F12572-EDB4-4315-839F-E2607B67ED4C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_API_PIM_IV", "WPF_API_PIM_IV\WPF_API_PIM_IV.csproj", "{5F332C27-BEA6-482D-BD51-E9395DCA317C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{23B6BFAF-C399-470F-AC43-92956E3FE62E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +25,16 @@ Global
 		{A6F12572-EDB4-4315-839F-E2607B67ED4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6F12572-EDB4-4315-839F-E2607B67ED4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6F12572-EDB4-4315-839F-E2607B67ED4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F332C27-BEA6-482D-BD51-E9395DCA317C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F332C27-BEA6-482D-BD51-E9395DCA317C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F332C27-BEA6-482D-BD51-E9395DCA317C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F332C27-BEA6-482D-BD51-E9395DCA317C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5F332C27-BEA6-482D-BD51-E9395DCA317C} = {23B6BFAF-C399-470F-AC43-92956E3FE62E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {302D4D9D-AF3C-4999-A88F-4F6C978865CF}

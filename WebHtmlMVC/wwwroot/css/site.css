@@ -19,4 +19,18 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: darkred;
+}
+
+h2 {
+    text-align center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: ;
+}
+
+img{
+    width: 400px;
+}
+p{
+    font-size: 30px;
 }

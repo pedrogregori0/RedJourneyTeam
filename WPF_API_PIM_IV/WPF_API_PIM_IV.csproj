@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="img_obra1.jpg" />
+    <None Remove="img_obra2.jpeg" />
+    <None Remove="img_obra3.jpeg" />
+    <None Remove="img_obra4.jpeg" />
+    <None Remove="img_obra5.jpg" />
+    <None Remove="img_obra6.jpeg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="9.0.0" />
+    <PackageReference Include="MySqlConnector" Version="2.3.7" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img_obra1.jpg" />
+    <Resource Include="img_obra2.jpeg" />
+    <Resource Include="img_obra3.jpeg" />
+    <Resource Include="img_obra4.jpeg" />
+    <Resource Include="img_obra5.jpg" />
+    <Resource Include="img_obra6.jpeg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="View\TelaObra3.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\TelaObra2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\TelaObra1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\TelaRelatorio.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>
