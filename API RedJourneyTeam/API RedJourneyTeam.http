@@ -1,0 +1,6 @@
+@API_RedJourneyTeam_HostAddress = http://localhost:5001
+
+GET {{API_RedJourneyTeam_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
