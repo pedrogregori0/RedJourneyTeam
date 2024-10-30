@@ -39,9 +39,9 @@
                 </LinearGradientBrush>
             </Menu.Background>
 
-            <MenuItem x:Name="BotaoAbrirMenu_Obra1" Header="Obras" Height="100" Width="110" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Obra1_Click"/>
-            <MenuItem x:Name="BotaoAbrirQuestionario_Obra1" Header="Questionario" Height="100" Width="160" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Obra1_Click"/>
-            <MenuItem x:Name="BotaoAbrirRelatorio_Obra1" Header="Relatorio" Height="100" Width="125" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Obra1_Click"/>
+            <MenuItem x:Name="BotaoAbrirMenu_Obra1" Header="Obras" Height="100" Width="110" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Obra1_Click"/>
+            <MenuItem x:Name="BotaoAbrirQuestionario_Obra1" Header="Questionario" Height="100" Width="160" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Obra1_Click"/>
+            <MenuItem x:Name="BotaoAbrirRelatorio_Obra1" Header="Relatorio" Height="100" Width="125" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Obra1_Click"/>
         </Menu>
 
         <Label Content="A Era dos Rovers/ “Exploração Robótica”" 
@@ -49,6 +49,7 @@
                VerticalAlignment="Center" 
                HorizontalAlignment="Center" 
                FontWeight="Bold" 
+               FontFamily="Source Sans 3 Light"
                FontSize="40" 
                Width="776"
                Height="69"/>
@@ -65,6 +66,7 @@ clima do planeta.
                 Grid.Row="2" 
                 Grid.Column="1"
                 TextWrapping="Wrap"
+                FontFamily="Source Sans 3 Light"
                 FontSize="25"
                 VerticalAlignment="Top" 
                 HorizontalAlignment="Center"
@@ -75,9 +77,11 @@ clima do planeta.
 
             <Button x:Name="BotaoVoltarObra1" Content="Voltar"
                     Height="100" Width="200"
+                    FontFamily="Source Sans 3 Light"
                     Margin="40,0" Click="BotaoVoltarObra1_Click"/>
             <Button x:Name="BotaoProximoObra1" Content="Proximo"
                     Height="100" Width="200"
+                    FontFamily="Source Sans 3 Light"
                     Margin="60,0" Click="BotaoProximoObra1_Click"/>
 
         </StackPanel>

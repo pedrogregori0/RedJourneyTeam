@@ -39,9 +39,9 @@
                 </LinearGradientBrush>
             </Menu.Background>
 
-            <MenuItem x:Name="BotaoAbrirMenu_Obra4" Header="Obras" Height="100" Width="110" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Obra4_Click"/>
-            <MenuItem x:Name="BotaoAbrirQuestionario_Obra4" Header="Questionario" Height="100" Width="160" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Obra4_Click"/>
-            <MenuItem x:Name="BotaoAbrirRelatorio_Obra4" Header="Relatorio" Height="100" Width="125" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Obra4_Click"/>
+            <MenuItem x:Name="BotaoAbrirMenu_Obra4" Header="Obras" Height="100" Width="110" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Obra4_Click"/>
+            <MenuItem x:Name="BotaoAbrirQuestionario_Obra4" Header="Questionario" Height="100" Width="160" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Obra4_Click"/>
+            <MenuItem x:Name="BotaoAbrirRelatorio_Obra4" Header="Relatorio" Height="100" Width="125" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Obra4_Click"/>
         </Menu>
 
 
@@ -50,7 +50,10 @@
                VerticalAlignment="Center" 
                HorizontalAlignment="Center"
                Margin="0,0,0,0"
-               FontWeight="Bold" FontSize="40" Height="63" Width="1228" />
+               FontWeight="Bold" 
+               FontFamily="Source Sans 3 Light"
+               FontSize="40" 
+               Height="63" Width="1228" />
 
 
         <TextBlock
@@ -62,22 +65,25 @@ história geológica de Marte e ajudou a localizar locais de interesse para futu
 robóticas e humanas. Em 2018, a missão Mars Express da ESA (Agência Espacial
 Europeia) tirou uma foto da cratera Korolev, cheia de gelo de água, contribuindo ainda mais
 para o entendimento das reservas de água em Marte e sua potencial habitabilidade"
-                Grid.Row="2" 
-                Grid.Column="1"
-                TextWrapping="Wrap"
-                FontSize="25"
-                VerticalAlignment="Center" 
-                HorizontalAlignment="Center"
-                Margin="20,0,20,0"
-                Height="Auto" Width="Auto" />
+            Grid.Row="2" 
+            Grid.Column="1"
+            TextWrapping="Wrap"
+            FontFamily="Source Sans 3 Light"   
+            FontSize="25"
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center"
+            Margin="20,0,20,0"
+            Height="Auto" Width="Auto" />
 
         <StackPanel x:Name="BotaoProximoObra4" Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100" Width="560">
 
             <Button x:Name="BotaoVoltarObra4" Content="Voltar"
                     Height="100" Width="200"
+                    FontFamily="Source Sans 3 Light"
                     Margin="40,0" Click="BotaoVoltarObra4_Click"/>
             <Button Content="Proximo"
                     Height="100" Width="200"
+                    FontFamily="Source Sans 3 Light"
                     Margin="60,0" Click="BotaoProximoObra4_Click"/>
 
         </StackPanel>

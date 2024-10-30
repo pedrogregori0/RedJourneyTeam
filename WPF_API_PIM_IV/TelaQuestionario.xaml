@@ -15,8 +15,8 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="100*"/>
-            <RowDefinition Height="588*"/>
-            <RowDefinition Height="392*"/>
+            <RowDefinition Height="294*"/>
+            <RowDefinition Height="686*"/>
         </Grid.RowDefinitions>
 
         <Menu Height="100" VerticalAlignment="Center" Grid.ColumnSpan="3">
@@ -38,12 +38,12 @@
                 </LinearGradientBrush>
             </Menu.Background>
 
-            <MenuItem x:Name="BotaoAbrirMenu_Questionario" Header="Obras" Height="100" Width="110" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Questionario_Click"/>
-            <MenuItem x:Name="BotaoAbrirQuestionario_Questionario" Header="Questionario" Height="100" Width="160" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Questionario_Click"/>
-            <MenuItem x:Name="BotaoAbrirRelatorio_Questionario" Header="Relatorio" Height="100" Width="125" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Questionario_Click"/>
+            <MenuItem x:Name="BotaoAbrirMenu_Questionario" Header="Obras" Height="100" Width="92" FontSize="17" FontFamily="Source Sans 3 Light" Padding="25,0,0,0" Click="BotaoAbrirMenu_Questionario_Click"/>
+            <MenuItem x:Name="BotaoAbrirQuestionario_Questionario" Header="Questionario" Height="100" Width="140" FontSize="17" FontFamily="Source Sans 3 Light"  Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Questionario_Click"/>
+            <MenuItem x:Name="BotaoAbrirRelatorio_Questionario" Header="Relatorio" Height="100" Width="112" FontSize="17" FontFamily="Source Sans 3 Light" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Questionario_Click"/>
         </Menu>
 
-        <StackPanel x:Name="StackPanelTextP1" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel x:Name="StackPanelTextP1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="Auto" Width="Auto">
 
 
             <TextBlock Text="1. As informações apresentadas nas exposições foram claras e compreensíveis?*" 
@@ -51,6 +51,7 @@
                 HorizontalAlignment="Center"
                 Grid.Row="1"
                 Grid.Column="0"
+                FontFamily="Source Sans 3 Light" 
                 TextWrapping="Wrap"
                 Width="Auto" Height="Auto"
                 Margin="20,50,20,20" 
@@ -68,22 +69,23 @@
                     <ScaleTransform ScaleX="1.75" ScaleY="1.75"/>
                 </StackPanel.LayoutTransform>
 
-                <RadioButton Content="Muito Claras" GroupName="SatisfacaoP1" FontSize="16" Margin="5"/>
-                <RadioButton Content="Claras" GroupName="SatisfacaoP1" FontSize="16" Margin="5"/>
-                <RadioButton Content="Pouco claras" GroupName="SatisfacaoP1" FontSize="16" Margin="5"/>
-                <RadioButton Content="Confusas" GroupName="SatisfacaoP1" FontSize="16" Margin="5"/>
+                <RadioButton Content="Muito Claras" GroupName="SatisfacaoP1" FontSize="16" Margin="5" FontFamily="Source Sans 3 Light"/>
+                <RadioButton Content="Claras" GroupName="SatisfacaoP1" FontSize="16" Margin="5" FontFamily="Source Sans 3 Light"/>
+                <RadioButton Content="Pouco claras" GroupName="SatisfacaoP1" FontSize="16" Margin="5" FontFamily="Source Sans 3 Light"/>
+                <RadioButton Content="Confusas" GroupName="SatisfacaoP1" FontSize="16" Margin="5" FontFamily="Source Sans 3 Light"/>
 
             </StackPanel>
 
         </StackPanel>
 
-        <StackPanel x:Name="StackPanelTextP2" Grid.Column="1"  Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel x:Name="StackPanelTextP2" Grid.Column="1"  Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="Auto" Width="Auto">
 
             <TextBlock Text="2. Você achou que as exposições estimularam sua curiosidade sobre o tema?*" 
                 VerticalAlignment="Top"
                 HorizontalAlignment="Center"
                 Grid.Row="1"
                 Grid.Column="1"
+                FontFamily="Source Sans 3 Light"
                 TextWrapping="Wrap"
                 Margin="20,50,20,0" 
                 FontSize="30"/>
@@ -100,22 +102,23 @@
                     <ScaleTransform ScaleX="1.75" ScaleY="1.75"/>
                 </StackPanel.LayoutTransform>
 
-                <RadioButton Content="Muito" GroupName="SatisfacaoP2" FontSize="16" Margin="5"/>
-                <RadioButton Content="Moderadamente" GroupName="SatisfacaoP2" FontSize="16" Margin="5"/>
-                <RadioButton Content="Pouco" GroupName="SatisfacaoP2" FontSize="16" Margin="5"/>
-                <RadioButton Content="Nada" GroupName="SatisfacaoP2" FontSize="16" Margin="5"/>
+                <RadioButton Content="Muito" GroupName="SatisfacaoP2" FontSize="16" Margin="5" FontFamily="Source Sans 3 Light"/>
+                <RadioButton Content="Moderadamente" GroupName="SatisfacaoP2" FontSize="16" Margin="5" FontFamily="Source Sans 3 Light"/>
+                <RadioButton Content="Pouco" GroupName="SatisfacaoP2" FontSize="16" Margin="5" FontFamily="Source Sans 3 Light"/>
+                <RadioButton Content="Nada" GroupName="SatisfacaoP2" FontSize="16" Margin="5" FontFamily="Source Sans 3 Light"/>
 
             </StackPanel>
 
         </StackPanel>
 
-        <StackPanel x:Name="StackPanelTextP3" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel x:Name="StackPanelTextP3" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="Auto" Width="Auto">
 
             <TextBlock Text="3. Qual a probabilidade de você recomendar esta exposição a um amigo ou familiar?*" 
                 VerticalAlignment="Top"
                 HorizontalAlignment="Center"
                 Grid.Row="1"
                 Grid.Column="3"
+                FontFamily="Source Sans 3 Light"
                 TextWrapping="Wrap"
                 Margin="20,50,20,0" 
                 FontSize="30"/>
@@ -132,78 +135,79 @@
                     <ScaleTransform ScaleX="1.75" ScaleY="1.75"/>
                 </StackPanel.LayoutTransform>
 
-                <RadioButton Content="Muito alta" GroupName="SatisfacaoP3" FontSize="16" Margin="5"/>
-                <RadioButton Content="Alta" GroupName="SatisfacaoP3" FontSize="16" Margin="5"/>
-                <RadioButton Content="Moderada" GroupName="SatisfacaoP3" FontSize="16" Margin="5"/>
-                <RadioButton Content="Baixa" GroupName="SatisfacaoP3" FontSize="16" Margin="5"/>
+                <RadioButton Content="Muito alta" GroupName="SatisfacaoP3" FontSize="16" Margin="5" FontFamily="Source Sans 3 Light"/>
+                <RadioButton Content="Alta" GroupName="SatisfacaoP3" FontSize="16" Margin="5" FontFamily="Source Sans 3 Light"/>
+                <RadioButton Content="Moderada" GroupName="SatisfacaoP3" FontSize="16" Margin="5" FontFamily="Source Sans 3 Light"/>
+                <RadioButton Content="Baixa" GroupName="SatisfacaoP3" FontSize="16" Margin="5" FontFamily="Source Sans 3 Light"/>
 
             </StackPanel>
 
         </StackPanel>
 
-        <StackPanel x:Name="StackPanelSugestaoTema" 
-                    Grid.Column="0" 
-                    Grid.Row="2" 
-                    HorizontalAlignment="Center" 
-                    VerticalAlignment="Center">
-
-            <Label x:Name="LblSugestaoTema" Content="Sugestão de tema*" 
-               FontSize="20" 
-               Width="Auto"
-               Height="Auto"/>
-
-            <TextBox x:Name="TxbSugestaoTema" Text="" 
-                 FontSize="20"
-                 TextWrapping="Wrap" 
-                 VerticalScrollBarVisibility="Disabled"
-                 HorizontalScrollBarVisibility="Disabled"
-                 MaxWidth="490" MaxHeight="200"
-                 Width="490" Height="200"/>
-
-        </StackPanel>
 
         <!-- acrescentar limite na caixa de texto !!! -->
 
-        <StackPanel x:Name="StackPanelDigiteNome" 
-                    Grid.Column="1" Grid.Row="2" 
-                    HorizontalAlignment="Center" 
-                    VerticalAlignment="Top" 
-                    Margin="0,45,0,0">
+        <StackPanel x:Name="StackPanelCadastro" Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Margin="0,0,0,0" Width="Auto" Height="Auto"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
 
             <Label x:Name="LblDigiteNome" Content="Digite seu nome*" 
-               FontSize="20" 
-               Width="Auto"
-               Height="Auto"/>
+                FontSize="30" 
+                FontFamily="Source Sans 3 Light"   
+                Width="Auto"
+                Height="Auto"/>
 
             <TextBox x:Name="TxbNome" Text="" 
-                 FontSize="20"
-                 TextWrapping="Wrap" 
-                 Width="300" Height="40"/>
+                FontSize="30"
+                FontFamily="Source Sans 3 Light"
+                TextWrapping="Wrap" 
+                Width="Auto" Height="Auto"/>
+
+
+            <Label x:Name="LblDigiteEmail" Content="Digite seu e-mail para ficar dentro das novidades" 
+                FontSize="30" 
+                FontFamily="Source Sans 3 Light"
+                Width="Auto"
+                Height="Auto"/>
+
+            <TextBox x:Name="TxbEmail" Text="" 
+                FontSize="30"
+                FontFamily="Source Sans 3 Light"
+                TextWrapping="Wrap" 
+                Width="Auto" Height="Auto"/>
+
 
         </StackPanel>
 
-        <StackPanel x:Name="StackPanelDigiteEmail"
-                    Grid.Column="2" Grid.Row="2" 
+        <StackPanel x:Name="StackPanelSugestaoTema" 
+                    Grid.Column="2" 
+                    Grid.Row="1" 
                     HorizontalAlignment="Center" 
-                    VerticalAlignment="Top" 
-                    Margin="0,45,0,0">
+                    VerticalAlignment="Center" Height="Auto" Width="Auto">
 
-            <Label x:Name="LblDigiteEmail" Content="Digite seu e-mail para ficar dentro das novidades" 
-               FontSize="20" 
-               Width="Auto"
-               Height="Auto"/>
+            <Label x:Name="LblSugestaoTema" Content="Sugestão de tema" 
+                FontSize="30" 
+                Width="Auto"
+                Height="Auto"
+                FontFamily="Source Sans 3 Light"/>
 
-            <TextBox x:Name="TxbEmail" Text="E-mail (opcional)" 
-                 FontSize="20"
-                 TextWrapping="Wrap" 
-                 Width="300" Height="40"/>
+            <TextBox x:Name="TxbSugestaoTema" Text="" 
+                FontSize="30"
+                FontFamily="Source Sans 3 Light"
+                TextWrapping="Wrap" 
+                VerticalScrollBarVisibility="Disabled"
+                HorizontalScrollBarVisibility="Disabled"
+                MaxWidth="490" MaxHeight="200"
+                Width="490" Height="200"/>
 
         </StackPanel>
 
         <Button x:Name="BotaoFInalizarQuestionario" Content="Finalizar" 
-                Grid.Column="3" Grid.Row="2"
-                Margin="130,100,0,0"
-                Height="80" Width="150" Click="BotaoFinalizarQuestionario_Click"/>
+                Grid.Column="2" Grid.Row="2"
+                FontFamily="Source Sans 3 Light"
+                Width="150" Height="150"
+                Click="BotaoFinalizarQuestionario_Click" Margin="451,479,39,57"/>
 
 
 

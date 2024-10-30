@@ -3,6 +3,7 @@ using API_RedJourneyTeam.Repositorios;
 using API_RedJourneyTeam.Repositorios.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using MySql.EntityFrameworkCore.Extensions;
+
 namespace API_RedJourneyTeam
 {
     public class Program
@@ -11,19 +12,31 @@ namespace API_RedJourneyTeam
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            // Add services to the container.   
 
-            builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddControllers();
+
+            // Configure CORS to allow requests from any origin (you can restrict this to specific origins)
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    builder => builder
+                        .AllowAnyOrigin()   // Permite qualquer origem
+                        .AllowAnyMethod()   // Permite qualquer método HTTP (GET, POST, PUT, DELETE, etc.)
+                        .AllowAnyHeader()   // Permite qualquer cabeçalho
+                );
+            });
+
 
             builder.Services.AddEntityFrameworkMySQL()
                 .AddDbContext<QuestionarioDBContext>(
                     options => options.UseMySQL(builder.Configuration.GetConnectionString("DataBase"))
                 );
 
-            builder.Services.AddScoped<IVisitantesInterface, VisitanteRepositorio > ();
+            builder.Services.AddScoped<IVisitantesInterface, VisitanteRepositorio>();
 
             var app = builder.Build();
 
@@ -36,8 +49,10 @@ namespace API_RedJourneyTeam
 
             app.UseHttpsRedirection();
 
-            app.UseAuthorization();
+            // Enable CORS
+            app.UseCors("AllowAll");
 
+            app.UseAuthorization();
 
             app.MapControllers();
 

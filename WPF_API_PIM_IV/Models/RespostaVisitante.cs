@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPF_API_PIM_IV.Models
 {
-    internal class RespostaVisitante
+    public class RespostaVisitante
     {
         public string Nome { get; set; }
         public string Email {  get; set; }

@@ -3,10 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         xmlns:local="clr-namespace:WPF_API_PIM_IV"
         mc:Ignorable="d"
         Title="TelaRelatorio" Height="1080" Width="1920" WindowStyle="None" WindowState="Maximized">
-
 
     <Grid>
         <Grid.RowDefinitions>
@@ -25,14 +25,6 @@
         <Menu Height="100" VerticalAlignment="Center" Grid.ColumnSpan="5" Margin="0,0,0,0">
             <Menu.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <LinearGradientBrush.RelativeTransform>
-                        <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
-                            <RotateTransform Angle="272.526" CenterX="0.5" CenterY="0.5"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </LinearGradientBrush.RelativeTransform>
                     <GradientStop Color="#FFF93017" Offset="0.7"/>
                     <GradientStop Color="#FFF93017" Offset="1"/>
                     <GradientStop Color="#FFF96017" Offset="0.174"/>
@@ -43,13 +35,29 @@
 
             <MenuItem x:Name="BotaoAbrirMenu_Relatorio" Header="Obras" Height="100" Width="110" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Relatorio_Click"/>
             <MenuItem x:Name="BotaoAbrirQuestionario_Relatorio" Header="Questionario" Height="100" Width="160" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Relatorio_Click"/>
-            <MenuItem x:Name="BotaoAbrirRelatorio_Relatorio" Header="Relatorio" Height="100" Width="125" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Relatorio_Click"/>
         </Menu>
 
-        <Label Content="Relatório Final" HorizontalAlignment="Center" Margin="0,284,0,0" VerticalAlignment="Top" Height="60" Width="152" UseLayoutRounding="False" AutomationProperties.IsOffscreenBehavior="Onscreen" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Column="1" Grid.Row="1"/>
-        <Label Content="email (opcional)" HorizontalAlignment="Left" Margin="106,202,0,0" VerticalAlignment="Top" UseLayoutRounding="False" AutomationProperties.IsOffscreenBehavior="Onscreen" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1"/>
-        <Label Content="Sugestão de tema (opcional)" HorizontalAlignment="Left" Margin="315,23,0,0" VerticalAlignment="Top" UseLayoutRounding="False" AutomationProperties.IsOffscreenBehavior="Onscreen" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1"/>
-        <Label Content="Obrigado, volte sempre!" HorizontalAlignment="Left" Margin="558,211,0,0" VerticalAlignment="Top" UseLayoutRounding="False" AutomationProperties.IsOffscreenBehavior="Onscreen" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Row="1"/>
+        <!-- Gráfico Pizza Pergunta 1 -->
+        <lvc:PieChart Name="DonutPergunta1" Grid.Row="1" Grid.Column="1" 
+                      LegendLocation="Bottom" Width="400" Height="400">
+        </lvc:PieChart>
+        
+        <!-- Gráfico Pizza Pergunta 2 -->
+        <lvc:PieChart Name="DonutPergunta2" Grid.Row="1" Grid.Column="2" 
+                      LegendLocation="Bottom" Width="450" Height="400" HorizontalAlignment="Center" VerticalAlignment="Center">
+        </lvc:PieChart>
 
+        <!--Gráfico Pizza Pergunta 3 -->
+        <lvc:PieChart Name="DonutPergunta3" Grid.Row="1" Grid.Column="3" 
+                      LegendLocation="Bottom" Width="400" Height="400">
+        </lvc:PieChart>
+
+        <Label x:Name="lblTeste" Content="email (opcional)" HorizontalAlignment="Left" 
+               Margin="226,237,0,0" VerticalAlignment="Top" 
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+               Grid.Row="1" Grid.Column="1"/>
+        <Button Grid.Column="1" Content="Button" HorizontalAlignment="Left" 
+                Margin="253,291,0,0" Grid.Row="1" VerticalAlignment="Top" 
+                Click="Button_Click"/>
     </Grid>
 </Window>

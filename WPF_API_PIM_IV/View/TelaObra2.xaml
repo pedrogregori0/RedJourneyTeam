@@ -39,9 +39,9 @@
                 </LinearGradientBrush>
             </Menu.Background>
 
-            <MenuItem x:Name="BotaoAbrirMenu_Obra2" Header="Obras" Height="100" Width="110" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Obra2_Click"/>
-            <MenuItem x:Name="BotaoAbrirQuestionario_Obra2" Header="Questionario" Height="100" Width="160" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Obra2_Click"/>
-            <MenuItem x:Name="BotaoAbrirRelatorio_Obra2" Header="Relatorio" Height="100" Width="125" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Obra2_Click"/>
+            <MenuItem x:Name="BotaoAbrirMenu_Obra2" Header="Obras" Height="100" Width="110" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Obra2_Click"/>
+            <MenuItem x:Name="BotaoAbrirQuestionario_Obra2" Header="Questionario" Height="100" Width="160" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Obra2_Click"/>
+            <MenuItem x:Name="BotaoAbrirRelatorio_Obra2" Header="Relatorio" Height="100" Width="125" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Obra2_Click"/>
         </Menu>
 
 
@@ -51,7 +51,10 @@
                HorizontalAlignment="Left"
                Grid.ColumnSpan="2"
                Margin="465,0,0,0"
-               FontWeight="Bold" FontSize="40" Height="63" Width="990" />
+               FontWeight="Bold" 
+               FontFamily="Source Sans 3 Light"
+               FontSize="40" 
+               Height="63" Width="990" />
 
 
         <TextBlock
@@ -61,10 +64,11 @@ ferramentas para estudar a geologia do planeta e coletar amostras que podem cont
 vestígios de vida microbiana. O helicóptero Ingenuity, que acompanha a Perseverance,
 demonstrou a possibilidade de voos controlados em Marte, ampliando as capacidades de
 exploração e oferecendo novas perspectivas sobre áreas inexploradas do planeta."
-                Grid.Row="2" 
-                Grid.Column="1"
-                TextWrapping="Wrap"
-                FontSize="25"
+            Grid.Row="2" 
+            Grid.Column="1"
+            TextWrapping="Wrap"
+            FontFamily="Source Sans 3 Light"    
+            FontSize="25"
                 VerticalAlignment="Top" 
                 HorizontalAlignment="Center" 
                 Margin="0,80,0,0"
@@ -74,9 +78,11 @@ exploração e oferecendo novas perspectivas sobre áreas inexploradas do planet
 
             <Button x:Name="BotaoVoltarObra2" Content="Voltar"
                     Height="100" Width="200"
+                    FontFamily="Source Sans 3 Light"
                     Margin="40,0" Click="BotaoVoltarObra2_Click"/>
             <Button x:Name="BotaoProximoObra2" Content="Proximo"
                     Height="100" Width="200"
+                    FontFamily="Source Sans 3 Light"
                     Margin="60,0" Click="BotaoProximoObra2_Click"/>
 
         </StackPanel>

@@ -20,7 +20,7 @@ namespace WPF_API_PIM_IV
     /// Lógica interna para TelaQuestionario.xaml
     /// </summary>
     public partial class TelaQuestionario : Window
-    {   
+    {
         Controle controle = new Controle();
         RespostaVisitante respostaAtual = new RespostaVisitante();
 
@@ -29,21 +29,44 @@ namespace WPF_API_PIM_IV
             InitializeComponent();
         }
 
-        
-        private void BotaoFinalizarQuestionario_Click(object sender, RoutedEventArgs e)
+
+        private async void BotaoFinalizarQuestionario_Click(object sender, RoutedEventArgs e)
         {
 
+            respostaAtual.Nome = TxbNome.Text;
+            respostaAtual.Email = TxbEmail.Text;
             respostaAtual.RespostaPergunta1 = controle.ObterRespostaSelecionadaP1(StackPanelOpcoesPergunta1);
             respostaAtual.RespostaPergunta2 = controle.ObterRespostaSelecioandaP2(StackPanelOpcoesPergunta2);
             respostaAtual.RespostaPergunta3 = controle.ObterRespostaSelecioandaP3(StackPanelOpcoesPergunta3);
-            respostaAtual.Nome = TxbNome.Text;
-            respostaAtual.Email = TxbEmail.Text;
             respostaAtual.SugestaoDeTema = TxbSugestaoTema.Text;
 
-            Conexao.InserirNoBanco(respostaAtual);
-            
-            controle.AbrirTelaInicial();
-            this.Close();
+            if (string.IsNullOrEmpty(respostaAtual.Nome) ||
+                string.IsNullOrEmpty(respostaAtual.RespostaPergunta1) ||
+                string.IsNullOrEmpty(respostaAtual.RespostaPergunta2) ||
+                string.IsNullOrEmpty(respostaAtual.RespostaPergunta3))
+            {
+                MessageBox.Show("Por favor, preencha todos os campos obrigatórios.");
+                return;
+            }
+
+            // Tenta enviar os dados para a API
+            try
+            {
+                await ApiService.EnviarDadosAsync(respostaAtual);
+                MessageBox.Show("Questionário enviado com sucesso!");
+
+                // Redireciona para a tela inicial e fecha a tela atual
+                controle.AbrirTelaInicial();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao enviar o questionário: " + ex.Message);
+            }
+
+
+            //controle.AbrirTelaInicial();
+            //this.Close();
         }
 
         private void BotaoAbrirMenu_Questionario_Click(object sender, RoutedEventArgs e)
@@ -54,7 +77,7 @@ namespace WPF_API_PIM_IV
 
         private void BotaoAbrirQuestionario_Questionario_Click(object sender, RoutedEventArgs e)
         {
-          
+
         }
 
         private void BotaoAbrirRelatorio_Questionario_Click(object sender, RoutedEventArgs e)
@@ -63,6 +86,6 @@ namespace WPF_API_PIM_IV
             this.Close();
         }
 
-     
+
     }
 }

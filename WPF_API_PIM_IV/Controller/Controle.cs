@@ -20,8 +20,8 @@ namespace WPF_API_PIM_IV.Controller
             telaInicial.Show();
         }
 
-        public void AbrirTeclado() 
-        { 
+        public void AbrirTeclado()
+        {
             TelaTeclado telaTeclado = new TelaTeclado();
             telaTeclado.Show();
         }
@@ -33,13 +33,15 @@ namespace WPF_API_PIM_IV.Controller
         public void AbrirTelaRelatorio()
         {
             TelaRelatorio telaRelatorio = new TelaRelatorio();
+            telaRelatorio.CarregarDadosRelatorio();
             telaRelatorio.Show();
+            
         }
-        public void AbrirTelaObra1() 
-        { 
+        public void AbrirTelaObra1()
+        {
             TelaObra1 telaObra1 = new TelaObra1();
             telaObra1.Show();
-            
+
         }
         public void AbrirTelaObra2()
         {
@@ -63,20 +65,20 @@ namespace WPF_API_PIM_IV.Controller
         }
         public void AbrirTelaObra6()
         {
-            TelaObra6 telaObra6 = new TelaObra6(); 
+            TelaObra6 telaObra6 = new TelaObra6();
             telaObra6.Show();
         }
 
         public void Navegar(int indiceAtual, bool proximo)
         {
             int NovoIndice = proximo ? indiceAtual + 1 : indiceAtual - 1;
-            
-            switch(NovoIndice)
+
+            switch (NovoIndice)
             {
                 case 1:
                     TelaObra1 telaObra1 = new TelaObra1();
                     telaObra1.Show();
-                    break;  
+                    break;
                 case 2:
                     TelaObra2 telaObra2 = new TelaObra2();
                     telaObra2.Show();
@@ -94,7 +96,7 @@ namespace WPF_API_PIM_IV.Controller
                     telaObra5.Show();
                     break;
                 case 6:
-                    TelaObra6 telaObra6 =  new TelaObra6();
+                    TelaObra6 telaObra6 = new TelaObra6();
                     telaObra6.Show();
                     break;
 
@@ -103,13 +105,12 @@ namespace WPF_API_PIM_IV.Controller
                     break;
 
 
-
             }
         }
 
         public string ObterRespostaSelecionadaP1(StackPanel stackPanelPergunta1)
         {
-            foreach(var resposta in stackPanelPergunta1.Children)
+            foreach (var resposta in stackPanelPergunta1.Children)
             {
                 if (resposta is RadioButton radiobutton && radiobutton.IsChecked == true)
                 {
@@ -146,7 +147,7 @@ namespace WPF_API_PIM_IV.Controller
 
         }
 
-        
+
 
     }
 }

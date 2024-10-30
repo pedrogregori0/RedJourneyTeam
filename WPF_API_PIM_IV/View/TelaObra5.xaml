@@ -39,9 +39,9 @@
                 </LinearGradientBrush>
             </Menu.Background>
 
-            <MenuItem x:Name="BotaoAbrirMenu_Obra5" Header="Obras" Height="100" Width="110" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Obra5_Click"/>
-            <MenuItem x:Name="BotaoAbrirQuestionario_Obra5" Header="Questionario" Height="100" Width="160" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Obra5_Click"/>
-            <MenuItem x:Name="BotaoAbrirRelatorio_Obra5" Header="Relatorio" Height="100" Width="125" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Obra5_Click"/>
+            <MenuItem x:Name="BotaoAbrirMenu_Obra5" Header="Obras" Height="100" Width="110" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Obra5_Click"/>
+            <MenuItem x:Name="BotaoAbrirQuestionario_Obra5" Header="Questionario" Height="100" Width="160" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Obra5_Click"/>
+            <MenuItem x:Name="BotaoAbrirRelatorio_Obra5" Header="Relatorio" Height="100" Width="125" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Obra5_Click"/>
         </Menu>
 
 
@@ -49,7 +49,9 @@
                Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
                VerticalAlignment="Center" 
                HorizontalAlignment="Center" 
-               FontWeight="Bold" FontSize="40" 
+               FontWeight="Bold" 
+               FontFamily="Source Sans 3 Light"
+               FontSize="40" 
                Height="Auto" Width="Auto" />
 
 
@@ -64,6 +66,7 @@ conforme necessário, otimizando assim a exploração e a pesquisa.
                 Grid.Row="2" 
                 Grid.Column="1"
                 TextWrapping="Wrap"
+                FontFamily="Source Sans 3 Light"    
                 FontSize="25"
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Center" 
@@ -74,9 +77,11 @@ conforme necessário, otimizando assim a exploração e a pesquisa.
 
             <Button x:Name="BotaoVoltarObra5" Content="Voltar"
                     Height="100" Width="200"
+                    FontFamily="Source Sans 3 Light"
                     Margin="40,0" Click="BotaoVoltarObra5_Click"/>
             <Button x:Name="BotaoProximoObra5" Content="Proximo"
                     Height="100" Width="200"
+                    FontFamily="Source Sans 3 Light"
                     Margin="60,0" Click="BotaoProximoObra5_Click"/>
 
         </StackPanel>
