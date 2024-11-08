@@ -98,6 +98,12 @@ namespace WPF_API_PIM_IV
             string resultado = await ApiService.ObterCalculoAsync();
             MessageBox.Show(resultado, "resumo das perguntas");
         }
+
+        private void BotaoSairRelatorio_Click(object sender, RoutedEventArgs e)
+        {
+            controle.AbrirTelaInicial();
+            this.Close();
+        }
     }
 
     public class DadosRelatorio

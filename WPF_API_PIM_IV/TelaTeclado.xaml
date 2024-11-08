@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_API_PIM_IV"
         mc:Ignorable="d"
-        Title="TelaTeclado" Height="500" Width="1100">
-    <Grid>
+        Title="TelaTeclado" 
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="Manual"
+        Height="500" Width="1100" Background="#FFE6E6E6">
+    <Grid Margin="0,-4,0,4">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2,5*"/>
             <ColumnDefinition Width="80*"/>
@@ -33,98 +37,97 @@
             <RowDefinition Height="50*"/>
         </Grid.RowDefinitions>
 
-        <Button Content="1"
+        <Button x:Name="btnTecladoNum1" Content="1"
                 Width="70"
                 Height="70"
                 HorizontalAlignment="Center" 
-                VerticalAlignment="Center"
-                Margin="0,0,0,0" 
+                VerticalAlignment="Center" 
                 Grid.Column="1" 
-                Grid.Row="1"/>
+                Grid.Row="1" Click="BotaoTeclado_Click"/>
 
-        <Button Content="2"
+        <Button x:Name="btnTecladoNum2" Content="2"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
         VerticalAlignment="Center"
         Margin="0,0,0,0" 
         Grid.Column="2" 
-        Grid.Row="1"/>
+        Grid.Row="1" Click="BotaoTeclado_Click"/>
 
-        <Button Content="3"
+        <Button x:Name="btnTecladoNum3" Content="3"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
         VerticalAlignment="Center"
         Margin="0,0,0,0" 
         Grid.Column="3" 
-        Grid.Row="1"/>
+        Grid.Row="1" Click="BotaoTeclado_Click"/>
 
-        <Button Content="4"
+        <Button x:Name="btnTecladoNum4" Content="4"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
         VerticalAlignment="Center"
         Margin="0,0,0,0" 
         Grid.Column="4" 
-        Grid.Row="1"/>
+        Grid.Row="1" Click="BotaoTeclado_Click"/>
 
-        <Button Content="5"
+        <Button x:Name="btnTecladoNum5" Content="5"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
         VerticalAlignment="Center"
         Margin="0,0,0,0" 
         Grid.Column="5" 
-        Grid.Row="1"/>
+        Grid.Row="1" Click="BotaoTeclado_Click"/>
 
-        <Button Content="6"
+        <Button x:Name="btnTecladoNum6" Content="6"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
         VerticalAlignment="Center"
         Margin="0,0,0,0" 
         Grid.Column="6" 
-        Grid.Row="1"/>
+        Grid.Row="1" Click="BotaoTeclado_Click"/>
 
-        <Button Content="7"
+        <Button x:Name="btnTecladoNum7" Content="7"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
         VerticalAlignment="Center"
         Margin="0,0,0,0" 
         Grid.Column="7" 
-        Grid.Row="1"/>
+        Grid.Row="1" Click="BotaoTeclado_Click"/>
 
-        <Button Content="8"
+        <Button x:Name="btnTecladoNum8" Content="8"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
         VerticalAlignment="Center"
         Margin="0,0,0,0" 
         Grid.Column="8" 
-        Grid.Row="1"/>
+        Grid.Row="1" Click="BotaoTeclado_Click"/>
 
-        <Button Content="9"
+        <Button x:Name="btnTecladoNum9" Content="9"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
         VerticalAlignment="Center"
         Margin="0,0,0,0" 
         Grid.Column="9" 
-        Grid.Row="1"/>
+        Grid.Row="1" Click="BotaoTeclado_Click"/>
 
-        <Button Content="0"
+        <Button x:Name="btnTecladoNum0" Content="0"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
         VerticalAlignment="Center"
         Margin="0,0,0,0" 
         Grid.Column="10" 
-        Grid.Row="1"/>
+        Grid.Row="1" Click="BotaoTeclado_Click"/>
 
 
-        <Button Content="Q"
+        <Button x:Name="btnTecladoQ" Content="Q"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
@@ -132,9 +135,9 @@
         Margin="0,0,0,0" 
         Grid.Column="1"
         Grid.ColumnSpan="2"
-        Grid.Row="2"/>
+        Grid.Row="2" Click="BotaoTeclado_Click"/>
 
-        <Button Content="W"
+        <Button x:Name="btnTecladoW" Content="W"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
@@ -142,9 +145,9 @@
         Margin="0,0,0,0" 
         Grid.Column="2"
                 Grid.ColumnSpan="2"
-        Grid.Row="2"/>
+        Grid.Row="2" Click="BotaoTeclado_Click"/>
 
-        <Button Content="E"
+        <Button x:Name="btnTecladoE" Content="E"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
@@ -152,9 +155,9 @@
         Margin="0,0,0,0" 
         Grid.Column="3"
         Grid.ColumnSpan="2"
-        Grid.Row="2"/>
+        Grid.Row="2" Click="BotaoTeclado_Click"/>
 
-        <Button Content="R"
+        <Button x:Name="btnTecladoR" Content="R"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
@@ -162,9 +165,9 @@
         Margin="0,0,0,0" 
         Grid.Column="4" 
         Grid.ColumnSpan="2"
-        Grid.Row="2"/>
+        Grid.Row="2" Click="BotaoTeclado_Click"/>
 
-        <Button Content="T"
+        <Button x:Name="btnTecladoT" Content="T"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
@@ -172,9 +175,9 @@
         Margin="0,0,0,0" 
         Grid.Column="5" 
         Grid.ColumnSpan="2"
-        Grid.Row="2"/>
+        Grid.Row="2" Click="BotaoTeclado_Click"/>
 
-        <Button Content="Y"
+        <Button x:Name="btnTecladoY" Content="Y"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
@@ -182,9 +185,9 @@
         Margin="0,0,0,0" 
         Grid.Column="6"
         Grid.ColumnSpan="2"
-        Grid.Row="2"/>
+        Grid.Row="2" Click="BotaoTeclado_Click"/>
 
-        <Button Content="U"
+        <Button x:Name="btnTecladoU" Content="U"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
@@ -192,9 +195,9 @@
         Margin="0,0,0,0" 
         Grid.Column="7"
         Grid.ColumnSpan="2"
-        Grid.Row="2"/>
+        Grid.Row="2" Click="BotaoTeclado_Click"/>
 
-        <Button Content="I"
+        <Button x:Name="btnTecladoI" Content="I"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
@@ -202,9 +205,9 @@
         Margin="0,0,0,0" 
         Grid.Column="8" 
         Grid.ColumnSpan="2"
-        Grid.Row="2"/>
+        Grid.Row="2" Click="BotaoTeclado_Click"/>
 
-        <Button Content="O"
+        <Button x:Name="btnTecladoO" Content="O"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
@@ -212,9 +215,9 @@
         Margin="0,0,0,0" 
         Grid.Column="9"
         Grid.ColumnSpan="2"
-        Grid.Row="2"/>
+        Grid.Row="2" Click="BotaoTeclado_Click"/>
 
-        <Button Content="P"
+        <Button x:Name="btnTecladoP" Content="P"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
@@ -222,101 +225,101 @@
         Margin="0,0,0,0" 
         Grid.Column="10" 
 Grid.ColumnSpan="2"
-        Grid.Row="2"/>
+        Grid.Row="2" Click="BotaoTeclado_Click"/>
 
 
-        <Button Content="A"
+        <Button x:Name="btnTecladoA" Content="A"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
         VerticalAlignment="Center"
         Margin="0,0,0,0" 
         Grid.Column="2" 
-        Grid.Row="3"/>
+        Grid.Row="3" Click="BotaoTeclado_Click"/>
 
-        <Button Content="S"
+        <Button x:Name="btnTecladoS" Content="S"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
         VerticalAlignment="Center"
         Margin="0,0,0,0" 
         Grid.Column="3" 
-        Grid.Row="3"/>
+        Grid.Row="3" Click="BotaoTeclado_Click"/>
 
-        <Button Content="D"
+        <Button x:Name="btnTecladoD" Content="D"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
         VerticalAlignment="Center"
         Margin="0,0,0,0" 
         Grid.Column="4" 
-        Grid.Row="3"/>
+        Grid.Row="3" Click="BotaoTeclado_Click"/>
 
-        <Button Content="F"
+        <Button x:Name="btnTecladoF" Content="F"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
         VerticalAlignment="Center"
         Margin="0,0,0,0" 
         Grid.Column="5" 
-        Grid.Row="3"/>
+        Grid.Row="3" Click="BotaoTeclado_Click"/>
 
-        <Button Content="G"
+        <Button x:Name="btnTecladoG" Content="G"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
         VerticalAlignment="Center"
         Margin="0,0,0,0" 
         Grid.Column="6" 
-        Grid.Row="3"/>
+        Grid.Row="3" Click="BotaoTeclado_Click"/>
 
-        <Button Content="H"
+        <Button x:Name="btnTecladoH" Content="H"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
         VerticalAlignment="Center"
         Margin="0,0,0,0" 
         Grid.Column="7" 
-        Grid.Row="3"/>
+        Grid.Row="3" Click="BotaoTeclado_Click"/>
 
-        <Button Content="J"
+        <Button x:Name="btnTecladoJ" Content="J"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
         VerticalAlignment="Center"
         Margin="0,0,0,0" 
         Grid.Column="8" 
-        Grid.Row="3"/>
+        Grid.Row="3" Click="BotaoTeclado_Click"/>
 
-        <Button Content="K"
+        <Button x:Name="btnTecladoK" Content="K"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
         VerticalAlignment="Center"
         Margin="0,0,0,0" 
         Grid.Column="9" 
-        Grid.Row="3"/>
+        Grid.Row="3" Click="BotaoTeclado_Click"/>
 
-        <Button Content="L"
+        <Button x:Name="btnTecladoL" Content="L"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
         VerticalAlignment="Center"
         Margin="0,0,0,0" 
         Grid.Column="10" 
-        Grid.Row="3"/>
+        Grid.Row="3" Click="BotaoTeclado_Click"/>
 
-        <Button Content="Ç"
+        <Button x:Name="btnTecladoÇ" Content="Ç"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
         VerticalAlignment="Center"
         Margin="0,0,0,0" 
         Grid.Column="11"
-        Grid.Row="3"/>
+        Grid.Row="3" Click="BotaoTeclado_Click"/>
 
 
-        <Button Content="Z"
+        <Button x:Name="btnTecladoZ" Content="Z"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
@@ -324,9 +327,9 @@ Grid.ColumnSpan="2"
         Margin="0,0,0,0" 
         Grid.Column="2"
         Grid.ColumnSpan="2"
-        Grid.Row="4"/>
+        Grid.Row="4" Click="BotaoTeclado_Click"/>
 
-        <Button Content="X"
+        <Button x:Name="btnTecladoX" Content="X"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
@@ -334,9 +337,9 @@ Grid.ColumnSpan="2"
         Margin="0,0,0,0" 
         Grid.Column="3"
         Grid.ColumnSpan="2"
-        Grid.Row="4"/>
+        Grid.Row="4" Click="BotaoTeclado_Click"/>
 
-        <Button Content="C"
+        <Button x:Name="btnTecladoC" Content="C"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
@@ -344,9 +347,9 @@ Grid.ColumnSpan="2"
         Margin="0,0,0,0" 
         Grid.Column="4"
         Grid.ColumnSpan="2"
-        Grid.Row="4"/>
+        Grid.Row="4" Click="BotaoTeclado_Click"/>
 
-        <Button Content="V"
+        <Button x:Name="btnTecladoV" Content="V"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
@@ -354,9 +357,9 @@ Grid.ColumnSpan="2"
         Margin="0,0,0,0" 
         Grid.Column="5"
         Grid.ColumnSpan="2"
-        Grid.Row="4"/>
+        Grid.Row="4" Click="BotaoTeclado_Click"/>
 
-        <Button Content="B"
+        <Button x:Name="btnTecladoB" Content="B"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
@@ -364,9 +367,9 @@ Grid.ColumnSpan="2"
         Margin="0,0,0,0" 
         Grid.Column="6"
         Grid.ColumnSpan="2"
-        Grid.Row="4"/>
+        Grid.Row="4" Click="BotaoTeclado_Click"/>
 
-        <Button Content="N"
+        <Button x:Name="btnTecladoN" Content="N"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
@@ -374,9 +377,9 @@ Grid.ColumnSpan="2"
         Margin="0,0,0,0" 
         Grid.Column="7"
         Grid.ColumnSpan="2"
-        Grid.Row="4"/>
+        Grid.Row="4" Click="BotaoTeclado_Click"/>
 
-        <Button Content="M"
+        <Button x:Name="btnTecladoM" Content="M"
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
@@ -384,10 +387,10 @@ Grid.ColumnSpan="2"
         Margin="0,0,0,0" 
         Grid.Column="8" 
         Grid.ColumnSpan="2"
-        Grid.Row="4"/>
+        Grid.Row="4" Click="BotaoTeclado_Click"/>
 
 
-        <Button Content=","
+        <Button x:Name="btnTecladoVirgula" Content=","
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
@@ -395,9 +398,9 @@ Grid.ColumnSpan="2"
         Margin="0,0,0,0" 
         Grid.Column="9"
         Grid.ColumnSpan="2"
-        Grid.Row="4"/>
+        Grid.Row="4" Click="BotaoTeclado_Click"/>
 
-        <Button Content="."
+        <Button x:Name="btnTecladoPontoFinal" Content="."
         Width="70"
         Height="70"
         HorizontalAlignment="Center" 
@@ -405,10 +408,10 @@ Grid.ColumnSpan="2"
         Margin="0,0,0,0" 
         Grid.Column="10" 
         Grid.ColumnSpan="2"
-        Grid.Row="4"/>
+        Grid.Row="4" Click="BotaoTeclado_Click"/>
 
 
-        <Button Content="←"
+        <Button x:Name="btnTecladoDelete" Content="←"
         Width="150"
         Height="70"
         HorizontalAlignment="Center" 
@@ -416,9 +419,9 @@ Grid.ColumnSpan="2"
         Margin="0,0,0,0" 
         Grid.Column="10"
                 Grid.ColumnSpan="3"
-        Grid.Row="1"/>
+        Grid.Row="1" Click="BotaoTecladoDelete"/>
 
-        <Button Content="Enter"
+        <Button x:Name="btnTecladoEnter" Content="Enter"
         Width="150"
         Height="70"
         HorizontalAlignment="Center" 
@@ -426,10 +429,10 @@ Grid.ColumnSpan="2"
         Margin="0,0,0,0" 
         Grid.Column="11" 
         Grid.ColumnSpan="2"
-        Grid.Row="2"/>
+        Grid.Row="2" Click="BotaoTecladoEnter"/>
 
 
-        <Button Content="Space"
+        <Button x:Name="btnTecladoEspaco" Content="Space"
         Width="380"
         Height="70"
         HorizontalAlignment="Center" 
@@ -437,8 +440,16 @@ Grid.ColumnSpan="2"
         Margin="0,0,0,0" 
         Grid.Column="4" 
         Grid.ColumnSpan="6"
-        Grid.Row="5"/>
+        Grid.Row="5" Click="BotaoTecladoEspaco"/>
 
+        <Button x:Name="btnTecladoArroba" Content="@"
+            Width="70"
+            Height="70"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center"
+            Margin="0,0,0,0" 
+            Grid.Column="10"
+            Grid.Row="5" Click="BotaoTeclado_Click"/>
 
 
     </Grid>

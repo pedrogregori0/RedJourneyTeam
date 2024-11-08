@@ -5,13 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using WPF_API_PIM_IV.Controller;
+
 using WPF_API_PIM_IV.Models;
 
 namespace WPF_API_PIM_IV
@@ -23,7 +18,8 @@ namespace WPF_API_PIM_IV
     {
         Controle controle = new Controle();
         RespostaVisitante respostaAtual = new RespostaVisitante();
-
+        
+        public TextBox textboxSelecionado;
         public TelaQuestionario()
         {
             InitializeComponent();
@@ -39,6 +35,8 @@ namespace WPF_API_PIM_IV
             respostaAtual.RespostaPergunta2 = controle.ObterRespostaSelecioandaP2(StackPanelOpcoesPergunta2);
             respostaAtual.RespostaPergunta3 = controle.ObterRespostaSelecioandaP3(StackPanelOpcoesPergunta3);
             respostaAtual.SugestaoDeTema = TxbSugestaoTema.Text;
+
+
 
             if (string.IsNullOrEmpty(respostaAtual.Nome) ||
                 string.IsNullOrEmpty(respostaAtual.RespostaPergunta1) ||
@@ -86,6 +84,15 @@ namespace WPF_API_PIM_IV
             this.Close();
         }
 
+        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            textboxSelecionado = sender as TextBox;
+        }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+            controle.AbrirTeclado(this);
+        }
     }
 }

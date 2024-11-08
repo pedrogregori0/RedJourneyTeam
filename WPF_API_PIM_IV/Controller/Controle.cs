@@ -20,9 +20,10 @@ namespace WPF_API_PIM_IV.Controller
             telaInicial.Show();
         }
 
-        public void AbrirTeclado()
+        public void AbrirTeclado(TelaQuestionario questionario)
         {
-            TelaTeclado telaTeclado = new TelaTeclado();
+            TelaTeclado telaTeclado = new TelaTeclado(questionario);
+            telaTeclado.Topmost = true;
             telaTeclado.Show();
         }
         public void AbrirTelaQuestionario()

@@ -1,4 +1,4 @@
-﻿<Window x:Class="WPF_API_PIM_IV.TelaRelatorio"  
+﻿<Window x:Name="StackPanelBotaoInfos" x:Class="WPF_API_PIM_IV.TelaRelatorio"  
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -11,7 +11,9 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100*"/>
-            <RowDefinition Height="980*"/>
+            <RowDefinition Height="147*"/>
+            <RowDefinition Height="653*"/>
+            <RowDefinition Height="180*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -22,7 +24,7 @@
             <ColumnDefinition Width="200*"/>
         </Grid.ColumnDefinitions>
 
-        <Menu Height="100" VerticalAlignment="Center" Grid.ColumnSpan="5" Margin="0,0,0,0">
+        <Menu Height="100" VerticalAlignment="Center" Grid.ColumnSpan="5">
             <Menu.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFF93017" Offset="0.7"/>
@@ -33,31 +35,97 @@
                 </LinearGradientBrush>
             </Menu.Background>
 
-            <MenuItem x:Name="BotaoAbrirMenu_Relatorio" Header="Obras" Height="100" Width="110" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Relatorio_Click"/>
-            <MenuItem x:Name="BotaoAbrirQuestionario_Relatorio" Header="Questionario" Height="100" Width="160" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Relatorio_Click"/>
+            <MenuItem x:Name="BotaoAbrirMenu_Relatorio" Header="Obras" Height="100" Width="110" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Relatorio_Click"/>
+            <MenuItem x:Name="BotaoAbrirQuestionario_Relatorio" Header="Questionario" Height="100" Width="160" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Relatorio_Click"/>
         </Menu>
 
-        <!-- Gráfico Pizza Pergunta 1 -->
-        <lvc:PieChart Name="DonutPergunta1" Grid.Row="1" Grid.Column="1" 
-                      LegendLocation="Bottom" Width="400" Height="400">
-        </lvc:PieChart>
-        
-        <!-- Gráfico Pizza Pergunta 2 -->
-        <lvc:PieChart Name="DonutPergunta2" Grid.Row="1" Grid.Column="2" 
-                      LegendLocation="Bottom" Width="450" Height="400" HorizontalAlignment="Center" VerticalAlignment="Center">
-        </lvc:PieChart>
+        <StackPanel Width="Auto" Height="Auto"
+                    Grid.Column="1" Grid.Row="1"
+                    Margin="0,0,0,0"
+                    HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    Grid.ColumnSpan="3">
 
-        <!--Gráfico Pizza Pergunta 3 -->
-        <lvc:PieChart Name="DonutPergunta3" Grid.Row="1" Grid.Column="3" 
-                      LegendLocation="Bottom" Width="400" Height="400">
-        </lvc:PieChart>
+            <Label x:Name="lblRelatorioRespostas" Content="Relatorio de respostas dos visitantes" 
+               FontFamily="Source Sans 3 Light"
+               FontSize="25"
+               Margin="0,0,0,0" 
+               HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-        <Label x:Name="lblTeste" Content="email (opcional)" HorizontalAlignment="Left" 
-               Margin="226,237,0,0" VerticalAlignment="Top" 
-               HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
-               Grid.Row="1" Grid.Column="1"/>
-        <Button Grid.Column="1" Content="Button" HorizontalAlignment="Left" 
-                Margin="253,291,0,0" Grid.Row="1" VerticalAlignment="Top" 
+            <!-- botao de teste do Json
+            <Button Grid.Column="1" Content="Button" HorizontalAlignment="Left" 
+                Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Top" 
                 Click="Button_Click"/>
+                -->
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" 
+                    Width="Auto" Height="Auto" 
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <Label x:Name="lblPergunta1" Content="Respostas Pergunta 1" 
+                FontFamily="Source Sans 3 Light"
+                FontSize="25"
+                Margin="0,0,0,0" 
+                HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <!-- Gráfico Pizza Pergunta 1 -->
+            <lvc:PieChart Name="DonutPergunta1" 
+                      FontFamily="Source Sans 3 Light"
+                      LegendLocation="Bottom" InnerRadius="100" 
+                      Width="400" Height="300" 
+                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0">
+            </lvc:PieChart>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="2" Grid.Column="2" 
+                    Width="Auto" Height="Auto" 
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <Label x:Name="lblPergunta2" Content="Respostas Pergunta 2" 
+                FontFamily="Source Sans 3 Light"
+                FontSize="25"
+                Margin="0,0,0,0" 
+                HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <!-- Gráfico Pizza Pergunta 2 -->
+            <lvc:PieChart Name="DonutPergunta2" Grid.Row="2" Grid.Column="2" 
+                      LegendLocation="Bottom" Width="450" Height="300"
+                      FontFamily="Source Sans 3 Light"
+                      InnerRadius="100" 
+                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0">
+            </lvc:PieChart>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="3" 
+                    Width="Auto" Height="Auto"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+
+
+            <Label x:Name="lblPergunta3" Content="Respostas Pergunta 3" 
+                FontFamily="Source Sans 3 Light"
+                FontSize="25"
+                Margin="0,0,0,0" 
+                HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            
+            <!--Gráfico Pizza Pergunta 3 -->
+            <lvc:PieChart Name="DonutPergunta3" Grid.Row="2" Grid.Column="3" 
+                      FontFamily="Source Sans 3 Light"
+                      LegendLocation="Bottom" InnerRadius="100" 
+                      Width="300" Height="300" 
+                      HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0">
+            </lvc:PieChart>
+
+        </StackPanel>
+
+        <Button x:Name="BotaoSairRelatorio" 
+                Width="120" Height="80"
+                Grid.Column="3" Grid.Row="3"
+                Grid.ColumnSpan="2"
+                FontFamily="Source Sans 3 Light"
+                Content="Finalizar" 
+                HorizontalAlignment="Center" VerticalAlignment="Center" Margin="425,0,0,0" Click="BotaoSairRelatorio_Click" />
+
     </Grid>
 </Window>
