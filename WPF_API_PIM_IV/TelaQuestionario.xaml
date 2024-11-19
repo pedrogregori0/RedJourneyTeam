@@ -7,13 +7,14 @@
         mc:Ignorable="d"
         Title="TelaQuestionario" Height="1080" Width="1920" WindowStyle="None" WindowState="Maximized">
 
-    <Grid Margin="0,0,0,0">
+    <Grid Margin="0,0,0,0" Background="#FFD7CCCF">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="96*"/>
             <ColumnDefinition Width="576*"/>
             <ColumnDefinition Width="576*"/>
             <ColumnDefinition Width="576*"/>
             <ColumnDefinition Width="96*"/>
+            
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="100*"/>
@@ -54,7 +55,7 @@
 
             <StackPanel x:Name="StackPanelNome" 
                         Grid.Column="1" Grid.Row="2"
-                        HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,200,0">
+                        HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,80,0">
 
 
                 <Label x:Name="LblDigiteNome" Content="Digite seu nome*" 
@@ -82,12 +83,7 @@
                 TextWrapping="Wrap" 
                 Width="Auto" Height="Auto" GotFocus="TextBox_GotFocus"/>
             </StackPanel>
-
-            
-            <!-- atualizar local do botão e ajustar tela -->
-            <Button Content="Button" HorizontalAlignment="Center" Margin="0,0,0,0" Click="Button_Click" />
-
-            
+ 
             
             <StackPanel x:Name="StackPanelSugestaoTema" 
                     HorizontalAlignment="Right" VerticalAlignment="Center" 
@@ -108,12 +104,27 @@
                 MaxWidth="490" MaxHeight="200"
                 Width="450" Height="150" GotFocus="TextBox_GotFocus"/>
 
+                
+                
+                
             </StackPanel>
+
+            <!-- atualizar local do botão e ajustar tela -->
+            <Button x:Name="btnAbrirTeclado" Content="Abrir Teclado" 
+                Width="150" Height="75"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Right"
+                FontFamily="Source Sans 3 Light"
+                FontSize="16"
+                Margin="45,0,0,0" 
+                Click="Button_Click" />
+
 
         </StackPanel>
 
         <StackPanel x:Name="StackPanelTextP1" 
-                    HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" VerticalAlignment="Top" 
+                    Margin="0,30,0,0"
                     Height="Auto" Width="Auto" 
                     Grid.Row="2" Grid.Column="1"
                     Grid.ColumnSpan="1">
@@ -127,7 +138,7 @@
                 FontFamily="Source Sans 3 Light" 
                 TextWrapping="Wrap"
                 Width="Auto" Height="Auto"
-                Margin="20,50,20,0" 
+                Margin="20,15,20,0" 
                 FontSize="30"/>
 
             <StackPanel x:Name="StackPanelOpcoesPergunta1" Grid.Row="1" 
@@ -153,7 +164,8 @@
 
         <StackPanel x:Name="StackPanelTextP2" 
                     Grid.Column="2"  Grid.Row="2" 
-                    HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" VerticalAlignment="Top"
+                    Margin="0,30,0,0"
                     Height="Auto" Width="Auto">
 
             <TextBlock Text="2. Você achou que as exposições estimularam sua curiosidade sobre o tema?*" 
@@ -163,7 +175,7 @@
                 Grid.Column="1"
                 FontFamily="Source Sans 3 Light"
                 TextWrapping="Wrap"
-                Margin="10,50,10,0" 
+                Margin="10,15,10,0" 
                 FontSize="30"/>
 
             <StackPanel x:Name="StackPanelOpcoesPergunta2" Grid.Row="1" 
@@ -189,18 +201,18 @@
 
         <StackPanel x:Name="StackPanelTextP3" 
                     Grid.Column="3" Grid.Row="2"
-                    HorizontalAlignment="Left" VerticalAlignment="Center" 
+                    HorizontalAlignment="Left" VerticalAlignment="Top"
+                    Margin="0,0,0,0"
                     Height="Auto" Width="Auto" 
-                    Grid.ColumnSpan="1" Margin="0,0,0,0">
+                    Grid.ColumnSpan="1">
 
-            <TextBlock Text="3. Qual a probabilidade de você recomendar esta exposição a um amigo ou familiar?*" 
-                VerticalAlignment="Top"
+            <TextBlock Text="3. Qual a probabilidade de você recomendar esta exposição a um amigo ou familiar?*"
                 HorizontalAlignment="Center"
                 Grid.Row="1"
                 Grid.Column="3"
                 FontFamily="Source Sans 3 Light"
                 TextWrapping="Wrap"
-                Margin="20,50,20,0" 
+                Margin="20,30,20,0" 
                 FontSize="30"/>
 
             <StackPanel x:Name="StackPanelOpcoesPergunta3" Grid.Row="1" 
@@ -222,18 +234,21 @@
 
             </StackPanel>
 
+        <Button x:Name="BotaoFInalizarQuestionario" Content="Finalizar" 
+                
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Right"
+                FontFamily="Source Sans 3 Light"
+                FontSize="16"
+                Width="150" Height="75"
+                Click="BotaoFinalizarQuestionario_Click" Margin="0,0,0,0"/>
+        
         </StackPanel>
 
 
 
 
 
-        <Button x:Name="BotaoFInalizarQuestionario" Content="Finalizar" 
-                Grid.Column="3" Grid.Row="2"
-                FontFamily="Source Sans 3 Light"
-                Width="150" Height="150"
-                Click="BotaoFinalizarQuestionario_Click" Margin="451,479,39,57" Grid.ColumnSpan="2"/>
-        
 
 
 

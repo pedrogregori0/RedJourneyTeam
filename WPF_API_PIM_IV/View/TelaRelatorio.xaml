@@ -124,6 +124,7 @@
                 Grid.Column="3" Grid.Row="3"
                 Grid.ColumnSpan="2"
                 FontFamily="Source Sans 3 Light"
+                FontSize="16"
                 Content="Finalizar" 
                 HorizontalAlignment="Center" VerticalAlignment="Center" Margin="425,0,0,0" Click="BotaoSairRelatorio_Click" />
 

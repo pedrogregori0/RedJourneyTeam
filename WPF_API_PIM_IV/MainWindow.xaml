@@ -44,131 +44,164 @@
                 </LinearGradientBrush>
             </Menu.Background>
 
-            <MenuItem x:Name="BotaoAbrirMenu_Home" Header="Obras" Height="100" Width="110" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Home_Click"/>
-            <MenuItem x:Name="BotaoAbrirQuestionario_Home" Header="Questionario" Height="100" Width="160" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Home_Click"/>
-            <MenuItem x:Name="BotaoAbrirRelatorio_Home" Header="Relatorio" Height="100" Width="125" FontSize="17" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Home_Click"/>
+            <MenuItem x:Name="BotaoAbrirMenu_Home" Header="Obras" Height="100" Width="110" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Home_Click"/>
+            <MenuItem x:Name="BotaoAbrirQuestionario_Home" Header="Questionario" Height="100" Width="160" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Home_Click"/>
+            <MenuItem x:Name="BotaoAbrirRelatorio_Home" Header="Relatorio" Height="100" Width="125" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Home_Click"/>
         </Menu>
 
-        
-            <!-- ajustar o texto pra ficar de acordo com as imagens-->
-            <Label Grid.Column="1" Content="Selecione a obra que gostaria de ver mais:" 
+
+        <!-- ajustar o texto pra ficar de acordo com as imagens-->
+        <Label Grid.Column="1" Content="Selecione a obra que gostaria de ver mais:" 
                 Grid.Row="1" 
                 Margin="0,0,0,0" 
                 VerticalAlignment="Center" HorizontalAlignment="Center"
                 Grid.ColumnSpan="3"
+                FontFamily="Source Sans 3 Light"
                 FontSize="36" />
-        
-
-        <StackPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-            
-        <Button x:Name="BotaoHomeAbrirObra1" Grid.Column="1" Grid.Row="2" 
-                Margin="0,0,0,0"  
-                Width="250" Height="250" Click="BotaoHomeAbrirObra1_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/img_obra1.jpg" Stretch="UniformToFill"/>
-            </Button.Background>
-        </Button>
 
 
-            <TextBlock Text="A Era dos Rovers / “Exploração Robótica”" 
+        <StackPanel x:Name="StackPanelObras1a3" 
+                    Orientation="Horizontal"
+                    Grid.Column="1" Grid.Row="2"
+                    Grid.ColumnSpan="3"
+                    Width="Auto" Height="Auto"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+
+
+            <StackPanel x:Name="StackPanelObra1">
+
+                <Button x:Name="BotaoHomeAbrirObra1" 
+                        Margin="0,0,0,0"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Width="250" Height="250" Click="BotaoHomeAbrirObra1_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/img_obra1.jpg" Stretch="UniformToFill"/>
+                    </Button.Background>
+                </Button>
+
+                <TextBlock  
                 Grid.Row="2"
                 Grid.Column="1"
                 TextWrapping="Wrap"
                 Width="Auto" Height="Auto"
                 Margin="0,0,0,0" 
-                FontSize="20"/>
+                FontFamily="Source Sans 3 Light"
+                FontSize="20">
+                  "A Era dos Rovers /<LineBreak></LineBreak> “Exploração Robótica”
+                </TextBlock>
+            </StackPanel>
 
 
-        </StackPanel>
 
-        <StackPanel Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-            
-        <Button x:Name="BotaoHomeAbrirObra2" Grid.Column="2" Grid.Row="2" 
-        Margin="0,0,0,0"  
-        Width="250" Height="250"
-        Click="BotaoHomeAbrirObra2_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/img_obra2.jpeg" Stretch="UniformToFill"/>
-            </Button.Background>
-        </Button>
+            <StackPanel x:Name="StackPanelBotaoObra2">
 
-            <TextBlock Text="A Busca por Vida / “Evidências no Planeta Vermelho" 
+                <Button x:Name="BotaoHomeAbrirObra2" Grid.Column="2" Grid.Row="2" 
+                    Margin="0,0,0,0"  
+                    Width="250" Height="250"
+                    Click="BotaoHomeAbrirObra2_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/img_obra2.jpeg" Stretch="UniformToFill"/>
+                    </Button.Background>
+                </Button>
+
+                <TextBlock  
                 Grid.Row="2"
                 Grid.Column="2"
                 TextWrapping="Wrap"
                 Width="Auto" Height="Auto"
-                FontSize="20"/>
+                FontFamily="Source Sans 3 Light"
+                FontSize="20">
+                "A Busca por Vida /<LineBreak></LineBreak> “Evidências no Planeta Vermelho"
+                </TextBlock>
+                
+            </StackPanel>
 
-        </StackPanel>
+            <StackPanel x:Name="StackPanelBotaoObra3">
 
-        <StackPanel Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-            
-        <Button x:Name="BotaoHomeAbrirObra3" Grid.Column="3" Grid.Row="2" 
-        Margin="20"  
-        Width="250" Height="250" Click="BotaoHomeAbrirObra3_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/img_obra3.jpeg" Stretch="UniformToFill"/>
-            </Button.Background>
-        </Button>
+                <Button x:Name="BotaoHomeAbrirObra3" Grid.Column="3" Grid.Row="2" 
+                    Margin="0,0,0,0"  
+                    Width="250" Height="250" Click="BotaoHomeAbrirObra3_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/img_obra3.jpeg" Stretch="UniformToFill"/>
+                    </Button.Background>
+                </Button>
 
-            <TextBlock Text="Rumo à Colonização / “Visões do Futuro" 
+                <TextBlock  
                 Grid.Row="2"
                 Grid.Column="3"
                 TextWrapping="Wrap"
                 Width="Auto" Height="Auto"
-                FontSize="20"/>
+                FontFamily="Source Sans 3 Light"
+                FontSize="20">
+                    "Rumo à Colonização /<LineBreak></LineBreak> “Visões do Futuro"
+                </TextBlock>
 
-
+            </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">
-        
-        <Button x:Name="BotaoHomeAbrirObra4" Grid.Column="1" Grid.Row="3" 
-            Width="250" Height="250" Click="BotaoHomeAbrirObra4_Click">
-            
-            <Button.Background>
-                <ImageBrush ImageSource="/img_obra4.jpeg" Stretch="UniformToFill"/>
-            </Button.Background>
-        </Button>
+        <StackPanel x:Name="StackPanelObras4a6" 
+            Orientation="Horizontal"
+            Grid.Column="1" Grid.Row="3"
+            Grid.ColumnSpan="3"
+            Width="Auto" Height="Auto"
+            HorizontalAlignment="Center" VerticalAlignment="Center">
 
-            <TextBlock Text="Missões de Mapeamento/ “Desvendando a Superfície Marciana" 
+            <StackPanel x:Name="StackPanelBotaoObra4">
+
+                <Button x:Name="BotaoHomeAbrirObra4" 
+                        Width="250" Height="250" Click="BotaoHomeAbrirObra4_Click">
+
+                    <Button.Background>
+                        <ImageBrush ImageSource="/img_obra4.jpeg" Stretch="UniformToFill"/>
+                    </Button.Background>
+                </Button>
+
+                <TextBlock  
                 TextWrapping="Wrap"
                 Width="Auto" Height="Auto"
-                FontSize="20"/>
+                FontFamily="Source Sans 3 Light"
+                FontSize="20">
+                "Missões de Mapeamento /<LineBreak></LineBreak> “Desvendando a Superfície Marciana"
+                </TextBlock>
+                
+            </StackPanel>
 
-        </StackPanel>
+            <StackPanel x:Name="StackPanelBotaoObra5">
 
-        <StackPanel Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">
-            
-        <Button x:Name="BotaoHomeAbrirObra5" Grid.Column="2" Grid.Row="3" 
-        Width="250" Height="250" Click="BotaoHomeAbrirObra5_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/img_obra5.jpg" Stretch="UniformToFill"/>
-            </Button.Background>
-        </Button>
+                <Button x:Name="BotaoHomeAbrirObra5" Grid.Column="2" Grid.Row="3" 
+                        Width="250" Height="250" Click="BotaoHomeAbrirObra5_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/img_obra5.jpg" Stretch="UniformToFill"/>
+                    </Button.Background>
+                </Button>
 
-            <TextBlock Text="A Tecnologia de Comunicações/ “Conectando a Distância" 
+                <TextBlock  
                 TextWrapping="Wrap"
                 Width="Auto" Height="Auto"
-                FontSize="20"/>
+                FontFamily="Source Sans 3 Light"
+                FontSize="20">
+                    "A Tecnologia de Comunicações /<LineBreak></LineBreak> “Conectando a Distância"
+                </TextBlock>
+            </StackPanel>
 
+            <StackPanel x:Name="StackPanelBotaoObra6" >
+
+                <Button x:Name="BotaoHomeAbrirObra6" Grid.Column="3" Grid.Row="3" 
+                        Width="250" Height="250" Click="BotaoHomeAbrirObra6_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/img_obra6.jpeg" Stretch="UniformToFill"/>
+                    </Button.Background>
+                </Button>
+
+                <TextBlock  
+                TextWrapping="Wrap"
+                Width="Auto" Height="Auto"
+                FontFamily="Source Sans 3 Light"
+                FontSize="20">
+                    "Impactos na Educação e Inspiração /<LineBreak></LineBreak> “Futuras Gerações"
+                </TextBlock>
+            </StackPanel>
         </StackPanel>
-
-        <StackPanel Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">
-
-            <Button x:Name="BotaoHomeAbrirObra6" Grid.Column="3" Grid.Row="3" 
-        Width="250" Height="250" Click="BotaoHomeAbrirObra6_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/img_obra6.jpeg" Stretch="UniformToFill"/>
-            </Button.Background>
-        </Button>
-
-            <TextBlock Text="Impactos na Educação e Inspiração/ “Futuras Gerações" 
-        TextWrapping="Wrap"
-        Width="Auto" Height="Auto"
-        FontSize="20"/>
-
-        </StackPanel>
-
     </Grid>
 </Window>
