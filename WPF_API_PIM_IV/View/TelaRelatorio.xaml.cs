@@ -104,6 +104,11 @@ namespace WPF_API_PIM_IV
             controle.AbrirTelaInicial();
             this.Close();
         }
+
+        private void BotaoAbrirRelatorio_Relatorio_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
     public class DadosRelatorio

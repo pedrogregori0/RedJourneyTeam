@@ -27,6 +27,14 @@
         <Menu Height="100" VerticalAlignment="Center" Grid.ColumnSpan="5">
             <Menu.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="272.526" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
                     <GradientStop Color="#FFF93017" Offset="0.7"/>
                     <GradientStop Color="#FFF93017" Offset="1"/>
                     <GradientStop Color="#FFF96017" Offset="0.174"/>
@@ -35,8 +43,10 @@
                 </LinearGradientBrush>
             </Menu.Background>
 
-            <MenuItem x:Name="BotaoAbrirMenu_Relatorio" Header="Obras" Height="100" Width="110" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Relatorio_Click"/>
-            <MenuItem x:Name="BotaoAbrirQuestionario_Relatorio" Header="Questionario" Height="100" Width="160" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Relatorio_Click"/>
+
+            <MenuItem x:Name="BotaoAbrirMenu_Relatorio" Header="Obras" Height="100" Width="100" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Relatorio_Click"/>
+            <MenuItem x:Name="BotaoAbrirQuestionario_Relatorio" Header="Questionario" Height="100" Width="145" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Relatorio_Click"/>
+            <MenuItem x:Name="BotaoAbrirRelatorio_Relatorio" Header="Relatorio" Height="100" Width="112" FontSize="17" FontFamily="Source Sans 3 Light" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Relatorio_Click"/>
         </Menu>
 
         <StackPanel Width="Auto" Height="Auto"
@@ -108,7 +118,7 @@
                 FontSize="25"
                 Margin="0,0,0,0" 
                 HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            
+
             <!--Gráfico Pizza Pergunta 3 -->
             <lvc:PieChart Name="DonutPergunta3" Grid.Row="2" Grid.Column="3" 
                       FontFamily="Source Sans 3 Light"

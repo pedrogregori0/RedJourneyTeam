@@ -41,8 +41,8 @@
                 </LinearGradientBrush>
             </Menu.Background>
 
-            <MenuItem x:Name="BotaoAbrirMenu_Questionario" Header="Obras" Height="100" Width="92" FontSize="17" FontFamily="Source Sans 3 Light" Padding="25,0,0,0" Click="BotaoAbrirMenu_Questionario_Click"/>
-            <MenuItem x:Name="BotaoAbrirQuestionario_Questionario" Header="Questionario" Height="100" Width="140" FontSize="17" FontFamily="Source Sans 3 Light"  Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Questionario_Click"/>
+            <MenuItem x:Name="BotaoAbrirMenu_Questionario" Header="Obras" Height="100" Width="100" FontSize="17" FontFamily="Source Sans 3 Light" Padding="25,0,0,0" Click="BotaoAbrirMenu_Questionario_Click"/>
+            <MenuItem x:Name="BotaoAbrirQuestionario_Questionario" Header="Questionario" Height="100" Width="145" FontSize="17" FontFamily="Source Sans 3 Light"  Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Questionario_Click"/>
             <MenuItem x:Name="BotaoAbrirRelatorio_Questionario" Header="Relatorio" Height="100" Width="112" FontSize="17" FontFamily="Source Sans 3 Light" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Questionario_Click"/>
         </Menu>
 

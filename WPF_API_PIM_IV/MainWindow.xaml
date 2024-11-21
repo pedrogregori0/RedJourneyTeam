@@ -44,8 +44,8 @@
                 </LinearGradientBrush>
             </Menu.Background>
 
-            <MenuItem x:Name="BotaoAbrirMenu_Home" Header="Obras" Height="100" Width="110" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Home_Click"/>
-            <MenuItem x:Name="BotaoAbrirQuestionario_Home" Header="Questionario" Height="100" Width="160" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Home_Click"/>
+            <MenuItem x:Name="BotaoAbrirMenu_Home" Header="Obras" Height="100" Width="100" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Home_Click"/>
+            <MenuItem x:Name="BotaoAbrirQuestionario_Home" Header="Questionario" Height="100" Width="145" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Home_Click"/>
             <MenuItem x:Name="BotaoAbrirRelatorio_Home" Header="Relatorio" Height="100" Width="125" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Home_Click"/>
         </Menu>
 
@@ -68,7 +68,7 @@
                     HorizontalAlignment="Center" VerticalAlignment="Center">
 
 
-            <StackPanel x:Name="StackPanelObra1">
+            <StackPanel x:Name="StackPanelObra1" Margin="50,0,75,0">
 
                 <Button x:Name="BotaoHomeAbrirObra1" 
                         Margin="0,0,0,0"
@@ -94,7 +94,7 @@
 
 
 
-            <StackPanel x:Name="StackPanelBotaoObra2">
+            <StackPanel x:Name="StackPanelBotaoObra2" Margin="50,0,50,0">
 
                 <Button x:Name="BotaoHomeAbrirObra2" Grid.Column="2" Grid.Row="2" 
                     Margin="0,0,0,0"  
@@ -117,7 +117,7 @@
                 
             </StackPanel>
 
-            <StackPanel x:Name="StackPanelBotaoObra3">
+            <StackPanel x:Name="StackPanelBotaoObra3" Margin="75,0,50,0">
 
                 <Button x:Name="BotaoHomeAbrirObra3" Grid.Column="3" Grid.Row="2" 
                     Margin="0,0,0,0"  
@@ -147,7 +147,7 @@
             Width="Auto" Height="Auto"
             HorizontalAlignment="Center" VerticalAlignment="Center">
 
-            <StackPanel x:Name="StackPanelBotaoObra4">
+            <StackPanel x:Name="StackPanelBotaoObra4" Margin="50,0,50,0">
 
                 <Button x:Name="BotaoHomeAbrirObra4" 
                         Width="250" Height="250" Click="BotaoHomeAbrirObra4_Click">
@@ -167,7 +167,7 @@
                 
             </StackPanel>
 
-            <StackPanel x:Name="StackPanelBotaoObra5">
+            <StackPanel x:Name="StackPanelBotaoObra5" Margin="50,0,50,0">
 
                 <Button x:Name="BotaoHomeAbrirObra5" Grid.Column="2" Grid.Row="3" 
                         Width="250" Height="250" Click="BotaoHomeAbrirObra5_Click">
@@ -185,7 +185,7 @@
                 </TextBlock>
             </StackPanel>
 
-            <StackPanel x:Name="StackPanelBotaoObra6" >
+            <StackPanel x:Name="StackPanelBotaoObra6" Margin="50,0,50,0">
 
                 <Button x:Name="BotaoHomeAbrirObra6" Grid.Column="3" Grid.Row="3" 
                         Width="250" Height="250" Click="BotaoHomeAbrirObra6_Click">
