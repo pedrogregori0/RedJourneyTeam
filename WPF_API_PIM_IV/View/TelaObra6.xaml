@@ -41,7 +41,7 @@
 
             <MenuItem x:Name="BotaoAbrirMenu_Obra6" Header="Obras" Height="100" Width="110" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Obra6_Click"/>
             <MenuItem x:Name="BotaoAbrirQuestionario_Obra6" Header="Questionario" Height="100" Width="160" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Obra6_Click"/>
-            <MenuItem x:Name="BotaoAbrirRelatorio_Obra6" Header="Relatorio" Height="100" Width="125" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Obra6_Click"/>
+            <MenuItem x:Name="BotaoAbrirRelatorio_Obra6" Header="Relatorio" Height="100" Width="112" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Obra6_Click"/>
         </Menu>
 
 
@@ -78,10 +78,13 @@ engenheiros do futuro, que poderão contribuir para a colonização de Marte."
             <Button x:Name="BotaoVoltarObra6" Content="Voltar"
                     Height="100" Width="200"
                     FontFamily="Source Sans 3 Light"
+                    Template="{StaticResource TemplateBotaoObrasArredondado}"
                     Margin="40,0" Click="BotaoVoltarObra6_Click"/>
+            
             <Button x:Name="BotaoProximoObra6" Content="Proximo"
                     Height="100" Width="200"
                     FontFamily="Source Sans 3 Light"
+                    Template="{StaticResource TemplateBotaoObrasArredondado}"
                     Margin="60,0" Click="BotaoProximoObra6_Click"/>
 
         </StackPanel>

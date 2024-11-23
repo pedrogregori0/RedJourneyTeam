@@ -9,8 +9,10 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="931*"/>
-            <ColumnDefinition Width="989*"/>
+            <ColumnDefinition Width="912*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="895*"/>
+            <ColumnDefinition Width="78*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -20,7 +22,7 @@
             <RowDefinition Height="160*"/>
         </Grid.RowDefinitions>
 
-        <Menu Height="100" VerticalAlignment="Center" Grid.ColumnSpan="2">
+        <Menu Height="100" VerticalAlignment="Center" Grid.ColumnSpan="5">
             <Menu.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -39,22 +41,21 @@
                 </LinearGradientBrush>
             </Menu.Background>
 
-            <MenuItem x:Name="BotaoAbrirMenu_Obra2" Header="Obras" Height="100" Width="110" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Obra2_Click"/>
-            <MenuItem x:Name="BotaoAbrirQuestionario_Obra2" Header="Questionario" Height="100" Width="160" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Obra2_Click"/>
-            <MenuItem x:Name="BotaoAbrirRelatorio_Obra2" Header="Relatorio" Height="100" Width="125" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Obra2_Click"/>
+            <MenuItem x:Name="BotaoAbrirMenu_Obra2" Header="Obras" Height="100" Width="100" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Obra2_Click"/>
+            <MenuItem x:Name="BotaoAbrirQuestionario_Obra2" Header="Questionario" Height="100" Width="145" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Obra2_Click"/>
+            <MenuItem x:Name="BotaoAbrirRelatorio_Obra2" Header="Relatorio" Height="100" Width="112" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Obra2_Click"/>
         </Menu>
 
 
         <Label Content="A Busca por Vida/ “Evidências no Planeta Vermelho”" 
-               Grid.Row="1" Grid.Column="0"
-               VerticalAlignment="Center" 
-               HorizontalAlignment="Left"
-               Grid.ColumnSpan="2"
-               Margin="465,0,0,0"
-               FontWeight="Bold" 
-               FontFamily="Source Sans 3 Light"
-               FontSize="40" 
-               Height="63" Width="990" />
+                Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center"  
+                FontFamily="Source Sans 3 Light"
+                FontSize="40" 
+                Width="Auto"
+                Height="Auto" 
+                Margin="35,0,0,0"/>
 
 
         <TextBlock
@@ -64,36 +65,42 @@ ferramentas para estudar a geologia do planeta e coletar amostras que podem cont
 vestígios de vida microbiana. O helicóptero Ingenuity, que acompanha a Perseverance,
 demonstrou a possibilidade de voos controlados em Marte, ampliando as capacidades de
 exploração e oferecendo novas perspectivas sobre áreas inexploradas do planeta."
-            Grid.Row="2" 
-            Grid.Column="1"
-            TextWrapping="Wrap"
-            FontFamily="Source Sans 3 Light"    
-            FontSize="25"
+                Grid.Row="2" 
+                Grid.Column="2"
+                TextWrapping="Wrap"
+                FontFamily="Source Sans 3 Light"
+                FontSize="25"
+                Margin="0,50,0,0"
                 VerticalAlignment="Top" 
-                HorizontalAlignment="Center" 
-                Margin="0,80,0,0"
+                HorizontalAlignment="Center"
                 Height="Auto" Width="Auto" />
 
-        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100" Width="560">
+        <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Horizontal" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" 
+            Height="Auto" Width="Auto" 
+            Margin="0,0,0,0" Grid.RowSpan="2">
 
             <Button x:Name="BotaoVoltarObra2" Content="Voltar"
                     Height="100" Width="200"
                     FontFamily="Source Sans 3 Light"
+                    Template="{StaticResource TemplateBotaoObrasArredondado}"
                     Margin="40,0" Click="BotaoVoltarObra2_Click"/>
+            
             <Button x:Name="BotaoProximoObra2" Content="Proximo"
                     Height="100" Width="200"
                     FontFamily="Source Sans 3 Light"
+                    Template="{StaticResource TemplateBotaoObrasArredondado}"
                     Margin="60,0" Click="BotaoProximoObra2_Click"/>
 
         </StackPanel>
 
         <Image Source="C:\Users\pedro\source\repos\RedJourneyTeam\WPF_API_PIM_IV\imagens\img_obra2.jpeg" 
                Grid.Row="2" 
-               Grid.Column="0"
                HorizontalAlignment="Center"
-               VerticalAlignment="Center" 
-               Margin="20,0,20,0"
-               Height="452" Width="801" />
+               VerticalAlignment="Center"
+               Margin="0,0,0,0"
+               Height="Auto" />
     </Grid>
 </Window>
 

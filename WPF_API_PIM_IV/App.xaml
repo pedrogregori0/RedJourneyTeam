@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:WPF_API_PIM_IV"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <!-- Template padrao para os botoes de voltar e proximo -->
+        <ControlTemplate x:Key="TemplateBotaoObrasArredondado" TargetType="Button">
+            <Border CornerRadius="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+        </ControlTemplate>
+
     </Application.Resources>
 </Application>

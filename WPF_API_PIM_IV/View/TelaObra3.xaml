@@ -79,10 +79,13 @@ missão tripulada se aproxima, refletindo o espírito inovador da humanidade."
             <Button x:Name="BotaoVoltarObra3" Content="Voltar"
                     Height="100" Width="200"
                     FontFamily="Source Sans 3 Light"
+                    Template="{StaticResource TemplateBotaoObrasArredondado}"
                     Margin="40,0" Click="BotaoVoltarObra3_Click"/>
+            
             <Button x:Name="BotaoProximoObra3" Content="Proximo"
                     Height="100" Width="200"
                     FontFamily="Source Sans 3 Light"
+                    Template="{StaticResource TemplateBotaoObrasArredondado}"
                     Margin="60,0" Click="BotaoProximoObra3_Click"/>
 
         </StackPanel>

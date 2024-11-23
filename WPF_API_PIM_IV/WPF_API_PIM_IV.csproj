@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fundo Estrelado %28RedJourneyTeam%29.png" />
     <None Remove="img_obra1.jpg" />
     <None Remove="img_obra2.jpeg" />
     <None Remove="img_obra3.jpeg" />
@@ -34,6 +35,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Fundo Estrelado (RedJourneyTeam).png" />
     <Resource Include="img_obra1.jpg" />
     <Resource Include="img_obra2.jpeg" />
     <Resource Include="img_obra3.jpeg" />

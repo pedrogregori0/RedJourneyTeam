@@ -41,7 +41,7 @@
 
             <MenuItem x:Name="BotaoAbrirMenu_Obra4" Header="Obras" Height="100" Width="110" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Obra4_Click"/>
             <MenuItem x:Name="BotaoAbrirQuestionario_Obra4" Header="Questionario" Height="100" Width="160" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Obra4_Click"/>
-            <MenuItem x:Name="BotaoAbrirRelatorio_Obra4" Header="Relatorio" Height="100" Width="125" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Obra4_Click"/>
+            <MenuItem x:Name="BotaoAbrirRelatorio_Obra4" Header="Relatorio" Height="100" Width="112" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Obra4_Click"/>
         </Menu>
 
 
@@ -80,9 +80,11 @@ para o entendimento das reservas de água em Marte e sua potencial habitabilidad
             <Button x:Name="BotaoVoltarObra4" Content="Voltar"
                     Height="100" Width="200"
                     FontFamily="Source Sans 3 Light"
+                    Template="{StaticResource TemplateBotaoObrasArredondado}"
                     Margin="40,0" Click="BotaoVoltarObra4_Click"/>
             <Button Content="Proximo"
                     Height="100" Width="200"
+                    Template="{StaticResource TemplateBotaoObrasArredondado}"
                     FontFamily="Source Sans 3 Light"
                     Margin="60,0" Click="BotaoProximoObra4_Click"/>
 
