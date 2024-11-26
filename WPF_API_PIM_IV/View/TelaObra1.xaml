@@ -22,8 +22,24 @@
             <RowDefinition Height="160*"/>
         </Grid.RowDefinitions>
 
-        <Menu Height="100" VerticalAlignment="Center" Grid.ColumnSpan="4">
-            <Menu.Background>
+        <StackPanel x:Name="StackPanelLogo" 
+                    Height="Auto"
+                    Width="Auto"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Right"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="2"
+                    Panel.ZIndex="1" Opacity="100">
+            
+            
+            <Image x:Name="Logo" Source="C:\Users\pedro\source\repos\RedJourneyTeam\WPF_API_PIM_IV\imagens\LogoEscrita.png" Stretch="Uniform" 
+                    Width="Auto"/>
+
+        </StackPanel>
+        
+        <Menu Height="100" VerticalAlignment="Center" Grid.ColumnSpan="4" Panel.ZIndex="0">
+            <Menu.Background>   
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
                         <TransformGroup>
@@ -44,9 +60,10 @@
             <MenuItem x:Name="BotaoAbrirMenu_Obra1" Header="Obras" Height="100" Width="100" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Obra1_Click"/>
             <MenuItem x:Name="BotaoAbrirQuestionario_Obra1" Header="Questionario" Height="100" Width="145" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Obra1_Click"/>
             <MenuItem x:Name="BotaoAbrirRelatorio_Obra1" Header="Relatorio" Height="100" Width="112" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Obra1_Click"/>
+           
         </Menu>
 
-        <Label Content="A Era dos Rovers/ “Exploração Robótica”" 
+        <Label Content="A Era dos Rovers" 
                Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
                VerticalAlignment="Center" 
                HorizontalAlignment="Center"  
@@ -56,7 +73,45 @@
                Height="Auto" 
                Margin="35,0,0,0"/>
 
-        <StackPanel Grid.Row="2" 
+        <StackPanel x:Name="StackPanelMoldeImagemObra1" 
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Width="Auto" Height="Auto">
+
+
+            <Border CornerRadius="12" Margin="0" BorderThickness="0" Padding="12">
+                <Border.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFF6F00"/>
+                        <GradientStop Color="#FFF62626" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFF6F00"/>
+                        <GradientStop Color="#FFF62626" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <StackPanel x:Name="StackPanelBordaImagem">
+
+                    <Grid Width="660" Height="Auto" ClipToBounds="True">
+                        <Grid.Clip>
+                            <RectangleGeometry RadiusX="12" RadiusY="12" Rect="0,0,660,500" />
+                            <!-- 660 = largura, 500 = altura aproximada -->
+                        </Grid.Clip>
+                        <Image Source="C:\Users\pedro\source\repos\RedJourneyTeam\WPF_API_PIM_IV\imagens\img_obra1(reduzida).jpeg"
+                                Stretch="Fill"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center" />
+                    </Grid>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+
+        <StackPanel x:Name="StackPanelBordaTextoObra1" Grid.Row="2" 
                     Grid.Column="2"
                     Margin="0,50,0,0"
                     VerticalAlignment="Top" 
@@ -115,40 +170,5 @@ clima do planeta.
 
         </StackPanel>
 
-        <StackPanel x:Name="StackPanelMoldeImagem" Grid.Row="2"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Width="Auto" Height="Auto">
-
-
-            <Border CornerRadius="12" Margin="0" BorderThickness="0" Padding="12">
-                <Border.BorderBrush>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFFF6F00"/>
-                        <GradientStop Color="#FFF62626" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.BorderBrush>
-                <Border.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFFF6F00"/>
-                        <GradientStop Color="#FFF62626" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.Background>
-
-                <StackPanel x:Name="StackPanelBordaImagem">
-
-                    <Grid Width="660" Height="Auto" ClipToBounds="True">
-                        <Grid.Clip>
-                            <RectangleGeometry RadiusX="12" RadiusY="12" Rect="0,0,660,500" />
-                            <!-- 660 = largura, 500 = altura aproximada -->
-                        </Grid.Clip>
-                        <Image Source="C:\Users\pedro\source\repos\RedJourneyTeam\WPF_API_PIM_IV\imagens\img_obra1.jpg"
-                                Stretch="Fill"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center" />
-                    </Grid>
-                </StackPanel>
-            </Border>
-        </StackPanel>
     </Grid>
 </Window>

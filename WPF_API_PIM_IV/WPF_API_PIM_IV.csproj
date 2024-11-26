@@ -35,16 +35,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Fundo Estrelado (RedJourneyTeam).png" />
-    <Resource Include="img_obra1.jpg" />
-    <Resource Include="img_obra2.jpeg" />
-    <Resource Include="img_obra3.jpeg" />
-    <Resource Include="img_obra4.jpeg" />
-    <Resource Include="img_obra5.jpg" />
-    <Resource Include="img_obra6.jpeg" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="View\TelaObra3.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

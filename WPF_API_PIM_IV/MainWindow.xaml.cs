@@ -10,6 +10,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPF_API_PIM_IV.Controller;
 using WPF_API_PIM_IV.view;
+
 namespace WPF_API_PIM_IV
 {
     /// <summary>

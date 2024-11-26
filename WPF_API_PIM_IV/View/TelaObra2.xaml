@@ -22,7 +22,23 @@
             <RowDefinition Height="160*"/>
         </Grid.RowDefinitions>
 
-        <Menu Height="100" VerticalAlignment="Center" Grid.ColumnSpan="5">
+        <StackPanel x:Name="StackPanelLogo" 
+                   Height="Auto"
+                   Width="Auto"
+                   Orientation="Horizontal"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Right"
+                   Grid.Column="2"
+                   Grid.ColumnSpan="2"
+                   Panel.ZIndex="1" Opacity="100">
+
+
+            <Image x:Name="Logo" Source="C:\Users\pedro\source\repos\RedJourneyTeam\WPF_API_PIM_IV\imagens\LogoEscrita.png" Stretch="Uniform" 
+                   Width="Auto"/>
+
+        </StackPanel>
+
+        <Menu Height="100" VerticalAlignment="Center" Grid.ColumnSpan="4" Panel.ZIndex="0">
             <Menu.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -47,7 +63,7 @@
         </Menu>
 
 
-        <Label Content="A Busca por Vida/ “Evidências no Planeta Vermelho”" 
+        <Label Content="A Busca por Vida" 
                 Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Center"  
@@ -57,50 +73,101 @@
                 Height="Auto" 
                 Margin="35,0,0,0"/>
 
+        <StackPanel x:Name="StackPanelMoldeImagemObra2" 
+            Grid.Row="2"
+            Grid.Column="0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Width="Auto" Height="Auto">
 
-        <TextBlock
+
+            <Border CornerRadius="12" Margin="0" BorderThickness="0" Padding="12">
+                <Border.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFF6F00"/>
+                        <GradientStop Color="#FFF62626" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFF6F00"/>
+                        <GradientStop Color="#FFF62626" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <StackPanel x:Name="StackPanelBordaImagem">
+
+                    <Grid Width="660" Height="Auto" ClipToBounds="True">
+                        <Grid.Clip>
+                            <RectangleGeometry RadiusX="12" RadiusY="12" Rect="0,0,660,500" />
+                            <!-- 660 = largura, 500 = altura aproximada -->
+                        </Grid.Clip>
+                        <Image Source="C:\Users\pedro\source\repos\RedJourneyTeam\WPF_API_PIM_IV\imagens\"
+                        Stretch="Fill"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center" />
+                    </Grid>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+
+
+        <StackPanel x:Name="StackPanelBordaTextoObra2" Grid.Row="2" 
+                    Grid.Column="2"
+                    Margin="0,50,0,0"
+                    VerticalAlignment="Top" 
+                    HorizontalAlignment="Center">
+
+            <Border CornerRadius="12" Margin="0" BorderThickness="0" Padding="12">
+                <Border.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFF6F00"/>
+                        <GradientStop Color="#FFF62626" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFF6F00"/>
+                        <GradientStop Color="#FFF62626" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <StackPanel>
+
+                    <TextBlock
                 Text="As missões da NASA têm se concentrado na busca por sinais de vida em Marte,
 culminando na missão Perseverance, lançada em 2020. O rover está equipado com
 ferramentas para estudar a geologia do planeta e coletar amostras que podem conter
 vestígios de vida microbiana. O helicóptero Ingenuity, que acompanha a Perseverance,
 demonstrou a possibilidade de voos controlados em Marte, ampliando as capacidades de
 exploração e oferecendo novas perspectivas sobre áreas inexploradas do planeta."
-                Grid.Row="2" 
-                Grid.Column="2"
-                TextWrapping="Wrap"
-                FontFamily="Source Sans 3 Light"
-                FontSize="25"
-                Margin="0,50,0,0"
-                VerticalAlignment="Top" 
-                HorizontalAlignment="Center"
-                Height="Auto" Width="Auto" />
+                    TextWrapping="Wrap"
+                    FontFamily="Source Sans 3 Light"
+                    FontSize="25"
+                    Height="Auto" Width="Auto" />
+                </StackPanel>
+            </Border>
+        </StackPanel>
 
         <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Horizontal" 
             HorizontalAlignment="Center" 
             VerticalAlignment="Top" 
             Height="Auto" Width="Auto" 
             Margin="0,0,0,0" Grid.RowSpan="2">
-
+            
             <Button x:Name="BotaoVoltarObra2" Content="Voltar"
                     Height="100" Width="200"
                     FontFamily="Source Sans 3 Light"
                     Template="{StaticResource TemplateBotaoObrasArredondado}"
-                    Margin="40,0" Click="BotaoVoltarObra2_Click"/>
-            
+                    Margin="0,0,30,0" Click="BotaoVoltarObra2_Click"/>
+
             <Button x:Name="BotaoProximoObra2" Content="Proximo"
                     Height="100" Width="200"
                     FontFamily="Source Sans 3 Light"
                     Template="{StaticResource TemplateBotaoObrasArredondado}"
-                    Margin="60,0" Click="BotaoProximoObra2_Click"/>
+                    Margin="30,0,0,0" Click="BotaoProximoObra2_Click"/>
 
         </StackPanel>
 
-        <Image Source="C:\Users\pedro\source\repos\RedJourneyTeam\WPF_API_PIM_IV\imagens\img_obra2.jpeg" 
-               Grid.Row="2" 
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center"
-               Margin="0,0,0,0"
-               Height="Auto" />
     </Grid>
 </Window>
 

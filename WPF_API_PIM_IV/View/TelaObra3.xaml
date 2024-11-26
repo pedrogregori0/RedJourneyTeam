@@ -9,8 +9,10 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="143*"/>
-            <ColumnDefinition Width="177*"/>
+            <ColumnDefinition Width="912*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="895*"/>
+            <ColumnDefinition Width="78*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -20,7 +22,23 @@
             <RowDefinition Height="160*"/>
         </Grid.RowDefinitions>
 
-        <Menu Height="100" VerticalAlignment="Center" Grid.ColumnSpan="2">
+        <StackPanel x:Name="StackPanelLogo" 
+           Height="Auto"
+           Width="Auto"
+           Orientation="Horizontal"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Right"
+           Grid.Column="2"
+           Grid.ColumnSpan="2"
+           Panel.ZIndex="1" Opacity="100">
+
+
+            <Image x:Name="Logo" Source="C:\Users\pedro\source\repos\RedJourneyTeam\WPF_API_PIM_IV\imagens\LogoEscrita.png" Stretch="Uniform" 
+           Width="Auto"/>
+
+        </StackPanel>
+
+        <Menu Height="100" VerticalAlignment="Center" Grid.ColumnSpan="4" Panel.ZIndex="0">
             <Menu.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -45,18 +63,76 @@
         </Menu>
 
 
-        <Label Content="Rumo à Colonização/ “Visões do Futuro”" 
-               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
-               VerticalAlignment="Center" 
-               HorizontalAlignment="Left" 
-               Margin="580,0,0,0"
-               FontWeight="Bold" 
-               FontFamily="Source Sans 3 Light"
-               FontSize="40" 
-               Height="63" Width="772" />
+        <Label Content="Rumo à Colonização" 
+               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center"  
+                FontFamily="Source Sans 3 Light"
+                FontSize="40" 
+                Width="Auto"
+                Height="Auto" 
+                Margin="35,0,0,0"/>
+
+        <StackPanel x:Name="StackPanelMoldeImagemObra3" 
+                Grid.Row="2"
+                Grid.Column="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Width="Auto" Height="Auto">
 
 
-        <TextBlock
+            <Border CornerRadius="12" Margin="0" BorderThickness="0" Padding="12">
+                <Border.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFF6F00"/>
+                        <GradientStop Color="#FFF62626" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFF6F00"/>
+                        <GradientStop Color="#FFF62626" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <StackPanel x:Name="StackPanelBordaImagem">
+
+                    <Grid Width="660" Height="Auto" ClipToBounds="True">
+                        <Grid.Clip>
+                            <RectangleGeometry RadiusX="12" RadiusY="12" Rect="0,0,660,500" />
+                            <!-- 660 = largura, 500 = altura aproximada -->
+                        </Grid.Clip>
+                        <Image Source="C:\Users\pedro\source\repos\RedJourneyTeam\WPF_API_PIM_IV\imagens\img_obra3(reduzida).jpeg"
+                                Stretch="Fill"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center" />
+                    </Grid>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+
+        <StackPanel x:Name="StackPanelBordaTextoObra3" Grid.Row="2" 
+            Grid.Column="2"
+            Margin="0,50,0,0"
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Center">
+
+            <Border CornerRadius="12" Margin="0" BorderThickness="0" Padding="12">
+                <Border.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFF6F00"/>
+                        <GradientStop Color="#FFF62626" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFF6F00"/>
+                        <GradientStop Color="#FFF62626" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <StackPanel>
+
+                    <TextBlock
                 Text="Com os avanços na exploração de Marte, a colonização do planeta se torna uma
 possibilidade mais concreta. Iniciativas como o projeto Artemis da NASA buscam
 estabelecer uma presença humana na Lua como um trampolim para missões a Marte. A
@@ -64,38 +140,34 @@ colaboração entre agências espaciais e empresas privadas, como a SpaceX, est�
 acelerando o desenvolvimento de tecnologias necessárias para sustentar a vida em Marte.
 À medida que se superam desafios como radiação e logística de viagem, a visão de uma
 missão tripulada se aproxima, refletindo o espírito inovador da humanidade."
-            Grid.Row="2" 
-            Grid.Column="1"
-            TextWrapping="Wrap"
-            FontFamily="Source Sans 3 Light"    
-            FontSize="25"
-                VerticalAlignment="Center" 
-                HorizontalAlignment="Center"
-                Margin="20,0,20,0"
-                Height="Auto" Width="Auto" />
+                        TextWrapping="Wrap"
+                        FontFamily="Source Sans 3 Light"
+                        FontSize="25"
+                        Height="Auto" Width="Auto" />
+                </StackPanel>
+            </Border>
+        </StackPanel>
 
-        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100" Width="560">
+        <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Horizontal" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Top" 
+                    Height="Auto" Width="Auto" 
+                    Margin="0,0,0,0" Grid.RowSpan="2">
 
             <Button x:Name="BotaoVoltarObra3" Content="Voltar"
                     Height="100" Width="200"
                     FontFamily="Source Sans 3 Light"
                     Template="{StaticResource TemplateBotaoObrasArredondado}"
-                    Margin="40,0" Click="BotaoVoltarObra3_Click"/>
-            
+                    Margin="0,0,30,0" Click="BotaoVoltarObra3_Click"/>
+
             <Button x:Name="BotaoProximoObra3" Content="Proximo"
                     Height="100" Width="200"
                     FontFamily="Source Sans 3 Light"
                     Template="{StaticResource TemplateBotaoObrasArredondado}"
-                    Margin="60,0" Click="BotaoProximoObra3_Click"/>
+                    Margin="30,0,0,0" Click="BotaoProximoObra3_Click"/>
 
         </StackPanel>
 
-        <Image Source="C:\Users\pedro\source\repos\RedJourneyTeam\WPF_API_PIM_IV\imagens\img_obra3.jpeg" 
-               Grid.Row="2" 
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center" 
-               Margin="20,0,20,0"
-               Height="520" Width="759" />
     </Grid>
 </Window>
 
