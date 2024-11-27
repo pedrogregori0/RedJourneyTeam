@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\pedro\source\repos\RedJourneyTeam\WPF_API_PIM_IV\imagens\Fundo Estrelado (RedJourneyTeam).png"/>
+            <ImageBrush ImageSource="C:\Users\pedro\source\repos\RedJourneyTeam\WPF_API_PIM_IV\imagens\img_BackGroundPadrao(RedJouneyTeam).jpeg"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="100*"/>
@@ -64,8 +64,8 @@
             </Menu.Background>
 
             <MenuItem x:Name="BotaoAbrirMenu_Home" Header="Obras" Height="100" Width="100" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Home_Click"/>
-            <MenuItem x:Name="BotaoAbrirQuestionario_Home" Header="Questionario" Height="100" Width="145" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Home_Click"/>
-            <MenuItem x:Name="BotaoAbrirRelatorio_Home" Header="Relatorio" Height="100" Width="112" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Home_Click"/>
+            <MenuItem x:Name="BotaoAbrirQuestionario_Home" Header="Questionário" Height="100" Width="145" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Home_Click"/>
+            <MenuItem x:Name="BotaoAbrirRelatorio_Home" Header="Relatório" Height="100" Width="112" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Home_Click"/>
         </Menu>
 
 
@@ -131,8 +131,8 @@
                             Width="Auto" Height="Auto"
                             Margin="0,0,0,0" 
                             FontFamily="Source Sans 3 Light"
-                            FontSize="20">
-                            "A Era dos Rovers"
+                            FontSize="20" Foreground="White">
+                            A Era dos Rovers
 
                         </TextBlock>
 
@@ -183,8 +183,8 @@
                             TextWrapping="Wrap"
                             Width="Auto" Height="Auto"
                             FontFamily="Source Sans 3 Light"
-                            FontSize="20">
-                                "A Busca por Vida"
+                            FontSize="20" Foreground="White">
+                                A Busca por Vida
                         </TextBlock>
                     </StackPanel>
                 </Border>
@@ -234,8 +234,8 @@
                             TextWrapping="Wrap"
                             Width="Auto" Height="Auto"
                             FontFamily="Source Sans 3 Light"
-                            FontSize="20">
-                                "Rumo à Colonização"
+                            FontSize="20" Foreground="White">
+                                Rumo à Colonização
                         </TextBlock>
                     </StackPanel>
                 </Border>
@@ -287,8 +287,8 @@
                             TextWrapping="Wrap"
                             Width="Auto" Height="Auto"
                             FontFamily="Source Sans 3 Light"
-                            FontSize="20">
-                            "Missões de Mapeamento"
+                            FontSize="20" Foreground="White">
+                            Missões de Mapeamento
                         </TextBlock>
 
                     </StackPanel>
@@ -333,8 +333,8 @@
                             TextWrapping="Wrap"
                             Width="Auto" Height="Auto"
                             FontFamily="Source Sans 3 Light"
-                            FontSize="20">
-                                “Conectando a Distância"
+                            FontSize="20" Foreground="White">
+                                Conectando a Distância
                         </TextBlock>
 
                     </StackPanel>
@@ -381,8 +381,8 @@
                             TextWrapping="Wrap"
                             Width="Auto" Height="Auto"
                             FontFamily="Source Sans 3 Light"
-                            FontSize="20">
-                                “Futuras Gerações"
+                            FontSize="20" Foreground="White">
+                                Futuras Gerações
                         </TextBlock>
 
                     </StackPanel>

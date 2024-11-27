@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:WPF_API_PIM_IV"
         mc:Ignorable="d"
         Title="TelaObra3" Height="1080" Width="1920" WindowStyle="None" WindowState="Maximized">
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\pedro\source\repos\RedJourneyTeam\WPF_API_PIM_IV\imagens\img_BackGroundPadrao(RedJouneyTeam).jpeg"/>
+    </Window.Background>
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -58,8 +61,8 @@
             </Menu.Background>
 
             <MenuItem x:Name="BotaoAbrirMenu_Obra3" Header="Obras" Height="100" Width="110" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Obra3_Click"/>
-            <MenuItem x:Name="BotaoAbrirQuestionario_Obra3" Header="Questionario" Height="100" Width="160" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Obra3_Click"/>
-            <MenuItem x:Name="BotaoAbrirRelatorio_Obra3" Header="Relatorio" Height="100" Width="125" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Obra3_Click"/>
+            <MenuItem x:Name="BotaoAbrirQuestionario_Obra3" Header="Questionário" Height="100" Width="145" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Obra3_Click"/>
+            <MenuItem x:Name="BotaoAbrirRelatorio_Obra3" Header="Relatório" Height="100" Width="112" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Obra3_Click"/>
         </Menu>
 
 
@@ -71,7 +74,7 @@
                 FontSize="40" 
                 Width="Auto"
                 Height="Auto" 
-                Margin="35,0,0,0"/>
+                Margin="35,0,0,0" Foreground="White"/>
 
         <StackPanel x:Name="StackPanelMoldeImagemObra3" 
                 Grid.Row="2"
@@ -154,18 +157,55 @@ missão tripulada se aproxima, refletindo o espírito inovador da humanidade."
                     Height="Auto" Width="Auto" 
                     Margin="0,0,0,0" Grid.RowSpan="2">
 
-            <Button x:Name="BotaoVoltarObra3" Content="Voltar"
+            <StackPanel Width="Auto" Height="Auto" Margin="0,0,30,0">
+
+                <Border CornerRadius="20" Margin="0" BorderThickness="0" Padding="5">
+                    <Border.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFFF6F00"/>
+                            <GradientStop Color="#FFF62626" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFFF6F00"/>
+                            <GradientStop Color="#FFF62626" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+                    <Button x:Name="BotaoVoltarObra3" Content="Voltar"
                     Height="100" Width="200"
+                    FontSize="25"
                     FontFamily="Source Sans 3 Light"
                     Template="{StaticResource TemplateBotaoObrasArredondado}"
-                    Margin="0,0,30,0" Click="BotaoVoltarObra3_Click"/>
+                    Click="BotaoVoltarObra3_Click"/>
+                </Border>
+            </StackPanel>
 
-            <Button x:Name="BotaoProximoObra3" Content="Proximo"
+            <StackPanel Width="Auto" Height="Auto" Margin="30,0,0,0">
+
+                <Border CornerRadius="20" Margin="0" BorderThickness="0" Padding="5">
+                    <Border.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFFF6F00"/>
+                            <GradientStop Color="#FFF62626" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFFF6F00"/>
+                            <GradientStop Color="#FFF62626" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+                    <Button x:Name="BotaoProximoObra3" Content="Próximo"
                     Height="100" Width="200"
+                    FontSize="25"
                     FontFamily="Source Sans 3 Light"
                     Template="{StaticResource TemplateBotaoObrasArredondado}"
-                    Margin="30,0,0,0" Click="BotaoProximoObra3_Click"/>
-
+                    Click="BotaoProximoObra3_Click"/>
+                </Border>
+            </StackPanel>
         </StackPanel>
 
     </Grid>

@@ -16,6 +16,7 @@
     <None Remove="img_obra4.jpeg" />
     <None Remove="img_obra5.jpg" />
     <None Remove="img_obra6.jpeg" />
+    <None Remove="View\img_BackGroundPadrao%28RedJouneyTeam%29.jpeg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +33,10 @@
     <PackageReference Include="MySql.Data" Version="9.1.0" />
     <PackageReference Include="MySqlConnector" Version="2.3.7" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\img_BackGroundPadrao(RedJouneyTeam).jpeg" />
   </ItemGroup>
 
   <ItemGroup>

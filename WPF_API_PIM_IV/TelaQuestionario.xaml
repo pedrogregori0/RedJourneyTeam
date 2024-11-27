@@ -6,8 +6,10 @@
         xmlns:local="clr-namespace:WPF_API_PIM_IV"
         mc:Ignorable="d"
         Title="TelaQuestionario" Height="1080" Width="1920" WindowStyle="None" WindowState="Maximized">
-
-    <Grid Margin="0,0,0,0" Background="#FFD7CCCF">
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\pedro\source\repos\RedJourneyTeam\WPF_API_PIM_IV\imagens\img_BackGroundPadrao(RedJouneyTeam).jpeg"/>
+    </Window.Background>
+    <Grid Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="96*"/>
             <ColumnDefinition Width="576*"/>
@@ -55,8 +57,8 @@
             </Menu.Background>
 
             <MenuItem x:Name="BotaoAbrirMenu_Questionario" Header="Obras" Height="100" Width="100" FontSize="17" FontFamily="Source Sans 3 Light" Padding="25,0,0,0" Click="BotaoAbrirMenu_Questionario_Click"/>
-            <MenuItem x:Name="BotaoAbrirQuestionario_Questionario" Header="Questionario" Height="100" Width="145" FontSize="17" FontFamily="Source Sans 3 Light"  Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Questionario_Click"/>
-            <MenuItem x:Name="BotaoAbrirRelatorio_Questionario" Header="Relatorio" Height="100" Width="112" FontSize="17" FontFamily="Source Sans 3 Light" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Questionario_Click"/>
+            <MenuItem x:Name="BotaoAbrirQuestionario_Questionario" Header="Questionário" Height="100" Width="145" FontSize="17" FontFamily="Source Sans 3 Light"  Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Questionario_Click"/>
+            <MenuItem x:Name="BotaoAbrirRelatorio_Questionario" Header="Relatório" Height="100" Width="112" FontSize="17" FontFamily="Source Sans 3 Light" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Questionario_Click"/>
         </Menu>
 
         <!-- acrescentar limite na caixa de texto !!! -->
@@ -83,60 +85,82 @@
 
                 <StackPanel Width="Auto" Height="Auto" Orientation="Horizontal">
 
-
                     <StackPanel x:Name="StackPanelNome" 
                         Grid.Column="1" Grid.Row="2"
                         HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,80,0">
 
-
                         <Label x:Name="LblDigiteNome" Content="Digite seu nome*" 
-                FontSize="30" 
-                FontFamily="Source Sans 3 Light"   
-                Width="Auto"
-                Height="Auto"/>
+                                FontSize="30" 
+                                FontFamily="Source Sans 3 Light"   
+                                Width="Auto"
+                                Height="Auto"/>
 
-                        <TextBox x:Name="TxbNome" Text="" 
-                FontSize="30"
-                FontFamily="Source Sans 3 Light"
-                TextWrapping="Wrap" 
-                Width="Auto" Height="Auto" GotFocus="TextBox_GotFocus"/>
+                        <Border CornerRadius="10" 
+                                BorderThickness="2" 
+                                BorderBrush="Gray" 
+                                Background="White" 
+                                Padding="2" 
+                                Width="Auto" Height="Auto">
 
+                            <TextBox x:Name="TxbNome" Text="" 
+                                FontSize="25"
+                                FontFamily="Source Sans 3 Light"
+                                BorderThickness="0"
+                                TextWrapping="Wrap" 
+                                Width="Auto" Height="Auto" GotFocus="TextBox_GotFocus"/>
+                        </Border>
 
                         <Label x:Name="LblDigiteEmail" Content="Digite seu e-mail para ficar dentro das novidades" 
-                FontSize="30" 
-                FontFamily="Source Sans 3 Light"
-                Width="Auto"
-                Height="Auto"/>
+                                FontSize="30" 
+                                FontFamily="Source Sans 3 Light"
+                                Width="Auto"
+                                Height="Auto"/>
 
-                        <TextBox x:Name="TxbEmail" Text="" 
-                FontSize="30"
-                FontFamily="Source Sans 3 Light"
-                TextWrapping="Wrap" 
-                Width="Auto" Height="Auto" GotFocus="TextBox_GotFocus"/>
+                        <Border CornerRadius="10" 
+                                BorderThickness="2" 
+                                BorderBrush="Gray" 
+                                Background="White" 
+                                Padding="2" 
+                                Width="Auto" Height="Auto">
+                            <TextBox x:Name="TxbEmail" Text="" 
+                                FontSize="25"
+                                FontFamily="Source Sans 3 Light"
+                                BorderThickness="0"
+                                TextWrapping="Wrap" 
+                                Width="Auto" Height="Auto" GotFocus="TextBox_GotFocus"/>
+                        </Border>
+
                     </StackPanel>
 
                     <StackPanel x:Name="StackPanelSugestaoTema" 
-                    HorizontalAlignment="Right" VerticalAlignment="Center" 
-                    Height="Auto" Width="Auto">
+                                HorizontalAlignment="Right" VerticalAlignment="Center" 
+                                Height="Auto" Width="Auto">
 
                         <Label x:Name="LblSugestaoTema" Content="Sugestão de tema" 
-                FontSize="30" 
-                Width="Auto"
-                Height="Auto"
-                FontFamily="Source Sans 3 Light"/>
+                                FontSize="30" 
+                                Width="Auto"
+                                Height="Auto"
+                                FontFamily="Source Sans 3 Light"/>
 
-                        <TextBox x:Name="TxbSugestaoTema" Text="" 
-                FontSize="30"
-                FontFamily="Source Sans 3 Light"
-                TextWrapping="Wrap" 
-                VerticalScrollBarVisibility="Disabled"
-                HorizontalScrollBarVisibility="Disabled"
-                MaxWidth="490" MaxHeight="200"
-                Width="450" Height="150" GotFocus="TextBox_GotFocus"/>
+                        <Border CornerRadius="10" 
+                                BorderThickness="2" 
+                                BorderBrush="Gray" 
+                                Background="White" 
+                                Padding="2" 
+                                Width="Auto" Height="Auto">
 
+                            <TextBox x:Name="TxbSugestaoTema" Text="" 
+                                FontSize="25"
+                                FontFamily="Source Sans 3 Light"
+                                TextWrapping="Wrap" 
+                                VerticalScrollBarVisibility="Disabled"
+                                HorizontalScrollBarVisibility="Disabled"
+                                MaxWidth="490" MaxHeight="150"
+                                BorderThickness="0"
+                                Width="450" Height="130" 
+                                GotFocus="TextBox_GotFocus"/>
+                        </Border>
                     </StackPanel>
-
-
 
                     <!-- atualizar local do botão e ajustar tela -->
                     <Button x:Name="btnAbrirTeclado" Content="Abrir Teclado" 

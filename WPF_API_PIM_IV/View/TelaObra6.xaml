@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:WPF_API_PIM_IV"
         mc:Ignorable="d"
                Title="TelaObra6" Height="1080" Width="1920" WindowStyle="None" WindowState="Maximized">
-
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\pedro\source\repos\RedJourneyTeam\WPF_API_PIM_IV\imagens\img_BackGroundPadrao(RedJouneyTeam).jpeg"/>
+    </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="912*"/>
@@ -56,13 +58,11 @@
             </Menu.Background>
 
             <MenuItem x:Name="BotaoAbrirMenu_Obra6" Header="Obras" Height="100" Width="110" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirMenu_Obra6_Click"/>
-            <MenuItem x:Name="BotaoAbrirQuestionario_Obra6" Header="Questionario" Height="100" Width="160" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Obra6_Click"/>
-            <MenuItem x:Name="BotaoAbrirRelatorio_Obra6" Header="Relatorio" Height="100" Width="112" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Obra6_Click"/>
+            <MenuItem x:Name="BotaoAbrirQuestionario_Obra6" Header="Questionario" Height="100" Width="145" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirQuestionario_Obra6_Click"/>
+            <MenuItem x:Name="BotaoAbrirRelatorio_Obra6" Header="Relatório" Height="100" Width="112" FontSize="17" FontFamily="Source Sans 3 Light" FontWeight="Bold" Padding="25,0,0,0" Click="BotaoAbrirRelatorio_Obra6_Click"/>
         </Menu>
 
-
-
-        <Label Content="“Futuras Gerações”" 
+        <Label Content="Futuras Gerações" 
                     Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center"  
@@ -70,7 +70,7 @@
                     FontSize="40" 
                     Width="Auto"
                     Height="Auto" 
-                    Margin="35,0,0,0"/>
+                    Margin="35,0,0,0" Foreground="White"/>
 
         <StackPanel x:Name="StackPanelMoldeImagemObra6" 
                     Grid.Row="2"
@@ -101,7 +101,7 @@
                             <RectangleGeometry RadiusX="12" RadiusY="12" Rect="0,0,660,500" />
                             <!-- 660 = largura, 500 = altura aproximada -->
                         </Grid.Clip>
-                        <Image Source="C:\Users\pedro\source\repos\RedJourneyTeam\WPF_API_PIM_IV\imagens\"
+                        <Image Source="C:\Users\pedro\source\repos\RedJourneyTeam\WPF_API_PIM_IV\imagens\img_obra6(reduzida).jpeg"
                                     Stretch="Fill"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center" />
@@ -152,18 +152,52 @@ engenheiros do futuro, que poderão contribuir para a colonização de Marte."
             Height="Auto" Width="Auto" 
             Margin="0,0,0,0" Grid.RowSpan="2">
 
-            <Button x:Name="BotaoVoltarObra6" Content="Voltar"
-                    Height="100" Width="200"
-                    FontFamily="Source Sans 3 Light"
-                    Template="{StaticResource TemplateBotaoObrasArredondado}"
-                    Margin="0,0,30,0" Click="BotaoVoltarObra6_Click"/>
-            
-            <Button x:Name="BotaoProximoObra6" Content="Proximo"
-                    Height="100" Width="200"
-                    FontFamily="Source Sans 3 Light"
-                    Template="{StaticResource TemplateBotaoObrasArredondado}"
-                    Margin="30,0,0,0" Click="BotaoProximoObra6_Click"/>
+            <Border CornerRadius="20" Margin="0" BorderThickness="0" Padding="5">
+                <Border.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFF6F00"/>
+                        <GradientStop Color="#FFF62626" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFF6F00"/>
+                        <GradientStop Color="#FFF62626" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
 
+                <Button x:Name="BotaoVoltarObra6" Content="Voltar"
+                    Height="100" Width="200"
+                    FontSize="25"
+                    FontFamily="Source Sans 3 Light"
+                    Template="{StaticResource TemplateBotaoObrasArredondado}"
+                    Click="BotaoVoltarObra6_Click"/>
+            </Border>
+
+            <StackPanel Width="Auto" Height="Auto" Margin="30,0,0,0">
+
+                <Border CornerRadius="20" Margin="0" BorderThickness="0" Padding="5">
+                    <Border.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFFF6F00"/>
+                            <GradientStop Color="#FFF62626" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFFF6F00"/>
+                            <GradientStop Color="#FFF62626" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+                    <Button x:Name="BotaoProximoObra6" Content="Próximo"
+                    Height="100" Width="200"
+                    FontSize="25"
+                    FontFamily="Source Sans 3 Light"
+                    Template="{StaticResource TemplateBotaoObrasArredondado}"
+                    Click="BotaoProximoObra6_Click"/>
+                </Border>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

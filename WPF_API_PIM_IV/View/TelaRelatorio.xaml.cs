@@ -17,7 +17,7 @@ namespace WPF_API_PIM_IV
         public TelaRelatorio()
         {
             InitializeComponent();
-            CarregarDadosRelatorio(); 
+            CarregarDadosRelatorio();
         }
 
         private void BotaoAbrirMenu_Relatorio_Click(object sender, RoutedEventArgs e)
@@ -40,43 +40,43 @@ namespace WPF_API_PIM_IV
 
             // Configurar o gráfico para Pergunta 1
 
-/* teste de grafico
-  
-            DonutPergunta1.Series = new SeriesCollection
-{
-    new PieSeries { Title = "Muito", Values = new ChartValues<double> { 30 } },
-    new PieSeries { Title = "Moderadamente", Values = new ChartValues<double> { 20 } },
-    new PieSeries { Title = "Pouco", Values = new ChartValues<double> { 10 } },
-    new PieSeries { Title = "Nada", Values = new ChartValues<double> { 40 } }
-};
+            /* teste de grafico
 
-*/
-            
+                        DonutPergunta1.Series = new SeriesCollection
+            {
+                new PieSeries { Title = "Muito", Values = new ChartValues<double> { 30 } },
+                new PieSeries { Title = "Moderadamente", Values = new ChartValues<double> { 20 } },
+                new PieSeries { Title = "Pouco", Values = new ChartValues<double> { 10 } },
+                new PieSeries { Title = "Nada", Values = new ChartValues<double> { 40 } }
+            };
+
+            */
+
             DonutPergunta1.Series = new SeriesCollection
                 {
-                    new PieSeries { Title = "Muito Claras", Values = new ChartValues<double> { dados.Pergunta1.GetValueOrDefault("Muito Claras", 0) } },
-                    new PieSeries { Title = "Claras", Values = new ChartValues<double> { dados.Pergunta1.GetValueOrDefault("Claras",0) } },
-                    new PieSeries { Title = "Pouco Claras", Values = new ChartValues<double> { dados.Pergunta1.GetValueOrDefault("Pouco Claras",0) } },
-                    new PieSeries { Title = "Confusas", Values = new ChartValues<double> { dados.Pergunta1.GetValueOrDefault("Confusas",0) } }
+                    new PieSeries {Title = "Muito Claras", Values = new ChartValues < double > { dados.Pergunta1.GetValueOrDefault("Muito Claras", 0) }, DataLabels = true, LabelPoint = chartPoint => $"{chartPoint.Y:0.00}%"},
+                    new PieSeries {Title = "Claras", Values = new ChartValues < double > { dados.Pergunta1.GetValueOrDefault("Claras", 0) }, DataLabels = true, LabelPoint = chartPoint => $"{chartPoint.Y:0.00}%"},
+                    new PieSeries {Title = "Pouco Claras", Values = new ChartValues < double > { dados.Pergunta1.GetValueOrDefault("Pouco Claras", 0) }, DataLabels = true, LabelPoint = chartPoint => $"{chartPoint.Y:0.00}%"},
+                    new PieSeries {Title = "Confusas", Values = new ChartValues < double > { dados.Pergunta1.GetValueOrDefault("Confusas", 0) }, DataLabels = true, LabelPoint = chartPoint => $"{chartPoint.Y:0.00}%"}
 
                 };
-            
-            
+
+
             DonutPergunta2.Series = new SeriesCollection
                 {
-                    new PieSeries { Title = "Muito", Values = new ChartValues<double> { dados.Pergunta2.GetValueOrDefault("Muito", 0) } },
-                    new PieSeries { Title = "Moderadamente", Values = new ChartValues<double> { dados.Pergunta2.GetValueOrDefault("Moderadamente",0) } },
-                    new PieSeries { Title = "Pouco", Values = new ChartValues<double> { dados.Pergunta2.GetValueOrDefault("Pouco",0) } },
-                    new PieSeries { Title = "Nada", Values = new ChartValues<double> { dados.Pergunta2.GetValueOrDefault("Nada",0) } }
+                    new PieSeries {Title = "Muito", Values = new ChartValues < double > { dados.Pergunta2.GetValueOrDefault("Muito", 0) }, DataLabels = true, LabelPoint = chartPoint => $"{chartPoint.Y:0.00}%"},
+                    new PieSeries {Title = "Moderadamente", Values = new ChartValues < double > { dados.Pergunta2.GetValueOrDefault("Moderadamente", 0) }, DataLabels = true, LabelPoint = chartPoint => $"{chartPoint.Y:0.00}%"},
+                    new PieSeries {Title = "Pouco", Values = new ChartValues < double > { dados.Pergunta2.GetValueOrDefault("Pouco", 0) }, DataLabels = true, LabelPoint = chartPoint => $"{chartPoint.Y:0.00}%"},
+                    new PieSeries { Title = "Nada", Values = new ChartValues<double> { dados.Pergunta2.GetValueOrDefault("Nada",0) }, DataLabels = true, LabelPoint = chartPoint => $"{chartPoint.Y:0.00}%" }
 
                 };
 
             DonutPergunta3.Series = new SeriesCollection
                 {
-                    new PieSeries { Title = "Muito Alta", Values = new ChartValues<double> { dados.Pergunta3.GetValueOrDefault("Muito Alta", 0) } },
-                    new PieSeries { Title = "Alta", Values = new ChartValues<double> { dados.Pergunta3.GetValueOrDefault("Alta",0) } },
-                    new PieSeries { Title = "Moderada", Values = new ChartValues<double> { dados.Pergunta3.GetValueOrDefault("Moderada",0) } },
-                    new PieSeries { Title = "Baixa", Values = new ChartValues<double> { dados.Pergunta3.GetValueOrDefault("Baixa",0) } }
+                    new PieSeries { Title = "Muito Alta", Values = new ChartValues<double> { dados.Pergunta3.GetValueOrDefault("Muito Alta", 0) }, DataLabels = true, LabelPoint = chartPoint => $"{chartPoint.Y:0.00}%" },
+                    new PieSeries { Title = "Alta", Values = new ChartValues<double> { dados.Pergunta3.GetValueOrDefault("Alta",0) }, DataLabels = true, LabelPoint = chartPoint => $"{chartPoint.Y:0.00}%"},
+                    new PieSeries { Title = "Moderada", Values = new ChartValues<double> { dados.Pergunta3.GetValueOrDefault("Moderada",0) }, DataLabels = true, LabelPoint = chartPoint => $"{chartPoint.Y:0.00}%" },
+                    new PieSeries { Title = "Baixa", Values = new ChartValues<double> { dados.Pergunta3.GetValueOrDefault("Baixa",0) }, DataLabels = true, LabelPoint = chartPoint => $"{chartPoint.Y:0.00}%" }
 
                 };
         }

@@ -51,10 +51,10 @@ namespace WPF_API_PIM_IV
             try
             {
                 await ApiService.EnviarDadosAsync(respostaAtual);
-                MessageBox.Show("Questionário enviado com sucesso!");
+                //MessageBox.Show("Questionário enviado com sucesso!");
 
                 // Redireciona para a tela inicial e fecha a tela atual
-                controle.AbrirTelaInicial();
+                controle.AbrirTelaRelatorio();
                 this.Close();
             }
             catch (Exception ex)
