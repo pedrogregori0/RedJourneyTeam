@@ -3,8 +3,8 @@ Este sistema foi desenvolvido na plataforma .NET com C#, a parte visual no Windo
 Os requisitos pedidos foram:
 
 Ter um questionário para coletar um feedback dos visitantes,
-Os dados dessa pesquisa devem calcular e gerar relatórios para que a equipe do museu tenha uma base s
-obre o tema apresentado e assim poder mudar os temas que serão exibidos futuramente,
+Os dados dessa pesquisa devem calcular e gerar relatórios para que a equipe do museu tenha uma base 
+sobre o tema apresentado e assim poder mudar os temas que serão exibidos futuramente,
 O questionário não pode coletar informações sensíveis dos visitantes seguindo as diretrizes da LGPD (Lei Geral de Proteção de Dados),
 Construir um teclado sem a utilização do teclado visual do própio sistema operacional.
 	
